@@ -1,0 +1,58 @@
+export default {
+    hungry: {
+        ru: 'Вы слегка голодны!',
+        ua: 'Ви злегка голодні!',
+        en: 'You are slightly hungry!',
+        de: 'Du bist ein wenig hungrig!',
+        pl: 'Jesteś lekko głodny!',
+    },
+    hungry2: {
+        ru: 'Вы проголодались!',
+        ua: 'Ви зголодніли!',
+        en: 'You are hungry!',
+        de: 'Du hast Hunger!',
+        pl: 'Jesteś głodny!',
+    },
+    hungry3: {
+        ru: 'Вы очень голодные!',
+        ua: 'Ви дуже голодні!',
+        en: 'You are very hungry!',
+        de: 'Du bist kurz vorm verhungern!',
+        pl: 'Jesteś bardzo głodny!',
+    },
+    thirst: {
+        ru: 'Вы немного хотите пить!',
+        ua: 'Ви трохи хочете пити!',
+        en: 'You are slightly thirsty!',
+        de: 'Du bist ein wenig Durstig!',
+        pl: 'Jesteś trochę spragniony!',
+    },
+    thirst2: {
+        ru: 'Вы хотите пить!',
+        ua: 'Ви хочете пити!',
+        en: 'You are thirsty!',
+        de: 'Du hast Durst!',
+        pl: 'Jesteś spragniony!',
+    },
+    thirst3: {
+        ru: 'Вы умираете от жажды!',
+        ua: 'Ви вмираєте від спраги!',
+        en: 'You are dying of thirst!',
+        de: 'Du bist kurz vorm verdursten!',
+        pl: 'Umierasz z pragnienia!',
+    },
+    youDontWannaEat: {
+        ru: 'Вы не хотите есть!',
+        ua: 'Ви не хочете їсти!',
+        en: "You don't want to eat!",
+        de: 'Du hast gerade keinen Hunger!',
+        pl: 'Nie chcesz jeść!',
+    },
+    youDontWannaDrink: {
+        ru: 'Вы не хотите пить!',
+        ua: 'Ви не хочете пити!',
+        en: "You don't want to drink!",
+        de: 'Du hast gerade keinen Durst!',
+        pl: 'Nie chcesz pić!',
+    },
+};

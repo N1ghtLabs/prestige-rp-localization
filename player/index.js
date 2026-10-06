@@ -1,0 +1,165 @@
+import passport from './passport';
+import lawyerLicense from './lawyerLicense';
+import signature from './signature';
+import payday from './payday';
+import aidkit from './aidkit';
+import cooldowns from './cooldowns';
+import vitals from './vitals';
+import disease from './disease';
+import statuses from './statuses';
+import bodyCamera from './bodyCamera';
+
+export default {
+    congratulations: {
+        ru: 'Поздравляем',
+        en: 'Congratulations',
+        de: 'Herzlichen Glückwunsch',
+        fr: 'Félicitations',
+        ua: 'Вітаємо',
+        zh: '恭喜',
+    },
+    youHaveNewLevel: {
+        ru: 'Вы достигли нового уровня {{level}}!',
+        en: 'You have reached a new level {{level}}!',
+        de: 'Du hast Stufe {{level}} erreicht!',
+        fr: 'Vous avez atteint le niveau {{level}} !',
+        ua: 'Ви досягли нового рівня {{level}}!',
+        zh: '您已达到新的等级{{level}}!',
+    },
+    youHaveNoLicenseWeapon: {
+        ru: 'У вас нет лицензии на оружие или она истекла',
+        ua: 'У вас немає ліцензії на зброю або вона прострочена',
+        en: 'You do not have a weapon license or it has expired',
+        de: 'Du hast keinen Waffenschein oder er ist abgelaufen',
+        pl: 'Nie masz licencji na broń lub wygasła',
+        zh: '你的持枪证已吊销或已过期',
+    },
+    activeJobAlready: {
+        ru: 'Вы уже работаете где то, сначала увольтесь там',
+        ua: 'Ви вже десь працюєте, спершу звільніться там',
+        en: 'You are already working somewhere, quit there first',
+        de: 'Du arbeitest bereits irgendwo, kündige dort zuerst',
+        pl: 'Już gdzieś pracujesz, najpierw się tam zwolnij',
+    },
+    activeJobInFactionAlready: {
+        ru: 'Вы сейчас на смене в фракции',
+        ua: 'Ви зараз на зміні у фракції',
+        en: 'You are currently on duty in a faction',
+        de: 'Du bist gerade im Fraktionsdienst',
+        pl: 'Jesteś obecnie na zmianie w frakcji',
+    },
+    toSeatPress: {
+        ru: 'Чтобы сесть нажмите',
+        ua: 'Щоб сісти, натисніть',
+        en: 'To sit down, press',
+        de: 'Zum Hinsetzen drücke',
+        pl: 'Aby usiąść, naciśnij',
+    },
+    ladderClimbUp: {
+        ru: 'Залезть',
+        ua: 'Залізти',
+        en: 'Climb up',
+        de: 'Hochklettern',
+        pl: 'Wejdź',
+    },
+    ladderClimbDown: {
+        ru: 'Спуститься',
+        ua: 'Спуститися',
+        en: 'Climb down',
+        de: 'Runterklettern',
+        pl: 'Zejdź',
+    },
+    petCat: {
+        ru: 'Погладить кота',
+        ua: 'Погладити кота',
+        en: 'Pet the cat',
+        de: 'Die Katze streicheln',
+        pl: 'Pogłaszcz kota',
+    },
+    petDog: {
+        ru: 'Погладить собаку',
+        ua: 'Погладити собаку',
+        en: 'Pet the dog',
+        de: 'Den Hund streicheln',
+        pl: 'Pogłaszcz psa',
+    },
+    //
+    couldntActivateCoal: {
+        ru: 'Вы не смогли активировать уголь...',
+        ua: 'Ви не змогли активувати вугілля...',
+        en: "You couldn't activate the coal...",
+        de: 'Du konntest die Kohle nicht aktivieren...',
+        pl: 'Nie udało się aktywować węgla...',
+    },
+    activatedCoal: {
+        ru: 'Вы выполнили все условия, и активировали уголь, ваша награда:',
+        ua: 'Ви виконали всі умови та активували вугілля, ваша нагорода:',
+        en: 'You met all the conditions and activated the coal, your reward:',
+        de: 'Du hast alle Bedingungen erfüllt und die Kohle aktiviert, deine Belohnung:',
+        pl: 'Spełniłeś wszystkie warunki i aktywowałeś węgiel, twoja nagroda:',
+    },
+    autoHandUp: {
+        ru: 'принуждает вас поднять руки',
+        ua: 'змушує вас підняти руки',
+        en: 'forces you to raise your hands',
+        de: 'zwingt dich, die Hände zu heben',
+        pl: 'zmusza cię do podniesienia rąk',
+    },
+    //
+    youLearnedBlueprint: {
+        ru: 'Вы изучили {{name}}, теперь ты можешь крафтить это в своей мастерской',
+        ua: 'Ти вивчив {{name}}, тепер ти можеш крафтити це у своїй майстерні',
+        en: 'You learned {{name}}, now you can craft it in your workshop',
+        de: 'Du hast {{name}} gelernt, jetzt kannst du es in deiner Werkstatt herstellen',
+        pl: 'Nauczyłeś się {{name}}, teraz możesz wytwarzać to w swoim warsztacie',
+    },
+    youHaveLearnedThisOneBlueprint: {
+        ru: 'Этот чертёж уже изучен, ты можешь его выбросить или продать',
+        ua: 'Цей кресленик уже вивчено, ти можеш його викинути або продати',
+        en: 'This blueprint is already learned, you can throw it away or sell it',
+        de: 'Dieser Bauplan wurde bereits gelernt, du kannst ihn wegwerfen oder verkaufen',
+        pl: 'Ten schemat został już poznany, możesz go wyrzucić lub sprzedać',
+    },
+    commands: {
+        supportUsage: {
+            ru: '- как связаться с администрацией (обращения в меню, раздел Поддержка)',
+            ua: "- як зв'язатися з адміністрацією (звернення в меню, розділ Підтримка)",
+            en: '- how to contact the administration (tickets in the menu, Support section)',
+            de: '- wie man die Administration kontaktiert (Anfragen im Menü, Bereich Support)',
+            pl: '- jak skontaktowac sie z administracja (zgloszenia w menu, sekcja Wsparcie)',
+        },
+        exitUsage: {
+            ru: '- выйти из ивента',
+            ua: '- вийти з івенту',
+            en: '- leave the event',
+            de: '- event verlassen',
+            pl: '- opusc wydarzenie',
+        },
+        pingUsage: {
+            ru: '- показать свой пинг',
+            ua: '- показати свій ping',
+            en: '- show your ping',
+            de: '- deinen ping anzeigen',
+            pl: '- pokaz swoj ping',
+        },
+        resetPayoutUsage: {
+            ru: '- сбросить дату выплаты депозита (debug)',
+            ua: '- скинути дату виплати депозиту (debug)',
+            en: '- reset deposit payout date (debug)',
+            de: '- auszahlungsdatum des deposits zurucksetzen (debug)',
+            pl: '- zresetowac date wyplaty depozytu (debug)',
+        },
+    },
+
+    //
+    passport,
+    lawyerLicense,
+    signature,
+    payday,
+    aidkit,
+    cooldowns,
+    vitals,
+    disease,
+    statuses,
+    bodyCamera,
+};

@@ -1,0 +1,128 @@
+export default {
+    vehicles: {
+        ru: 'Транспорт',
+        ua: 'Транспорт',
+        en: 'Vehicles',
+        de: 'Fahrzeuge',
+        pl: 'Pojazdy',
+    },
+    bank: {
+        ru: 'Банк',
+        ua: 'Банк',
+        en: 'Bank',
+        de: 'Bank',
+        pl: 'Bank',
+    },
+    gps: {
+        ru: 'Навигатор',
+        ua: 'Навігатор',
+        en: 'Navigator',
+        de: 'Navigation',
+        pl: 'Nawigator',
+    },
+    ads: {
+        ru: 'Объявления',
+        ua: 'Оголошення',
+        en: 'Ads',
+        de: 'Anzeigen',
+        pl: 'Ogłoszenia',
+    },
+    gallery: {
+        ru: 'Галерея',
+        ua: 'Галерея',
+        en: 'Gallery',
+        de: 'Galerie',
+        pl: 'Galeria',
+    },
+    music: {
+        ru: 'Плеер',
+        ua: 'Плеєр',
+        en: 'Player',
+        de: 'Player',
+        pl: 'Odtwarzacz',
+    },
+    calculator: {
+        ru: 'Калькулятор',
+        ua: 'Калькулятор',
+        en: 'Calculator',
+        de: 'Rechner',
+        pl: 'Kalkulator',
+    },
+    phone: {
+        ru: 'Телефон',
+        ua: 'Телефон',
+        en: 'Phone',
+        de: 'Telefon',
+        pl: 'Telefon',
+    },
+    messages: {
+        ru: 'Сообщения',
+        ua: 'Повідомлення',
+        en: 'Messages',
+        de: 'Nachrichten',
+        pl: 'Wiadomości',
+    },
+    camera: {
+        ru: 'Камера',
+        ua: 'Камера',
+        en: 'Camera',
+        de: 'Kamera',
+        pl: 'Aparat',
+    },
+    settings: {
+        ru: 'Настройки',
+        ua: 'Налаштування',
+        en: 'Settings',
+        de: 'Einstellungen',
+        pl: 'Ustawienia',
+    },
+    online: {
+        ru: 'Онлайн',
+        ua: 'Онлайн',
+        en: 'Online',
+        de: 'Online',
+        pl: 'Online',
+    },
+
+    party: {
+        ru: 'Группа',
+        ua: 'Група',
+        en: 'Group',
+        de: 'Gruppe',
+        pl: 'Grupa',
+    },
+
+    sim: {
+        ru: 'SIM-карта',
+        ua: 'SIM-картка',
+        en: 'SIM card',
+        de: 'SIM-Karte',
+        pl: 'Karta SIM',
+    },
+
+    // Default names of home-screen folders, shown until the player renames one.
+    folders: {
+        games: {
+            ru: 'Игры',
+            ua: 'Ігри',
+            en: 'Games',
+            de: 'Spiele',
+            pl: 'Gry',
+        },
+        folder: {
+            ru: 'Папка',
+            ua: 'Папка',
+            en: 'Folder',
+            de: 'Ordner',
+            pl: 'Folder',
+        },
+    },
+
+    unavailableForNow: {
+        ru: 'Это приложение на данный момент недоступно',
+        ua: 'Цей застосунок на даний момент недоступний',
+        en: 'This application is currently unavailable',
+        de: 'Diese Anwendung ist momentan nicht verfügbar',
+        pl: 'Ta aplikacja jest obecnie niedostępna',
+    },
+};
