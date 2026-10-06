@@ -1,0 +1,202 @@
+export default {
+    // The payment sheet's line (modules/payment), keyed by the seller's own id.
+    payment: {
+        illegalSeller: {
+            ru: 'Покупка у нелегального торговца',
+            ua: 'Купівля у нелегального торговця',
+            en: 'Purchase from the illegal trader',
+            de: 'Einkauf beim illegalen Händler',
+            pl: 'Zakup u nielegalnego handlarza',
+        },
+        localSeller: {
+            ru: 'Покупка у местного торговца',
+            ua: 'Купівля у місцевого торговця',
+            en: 'Purchase from the local trader',
+            de: 'Einkauf beim örtlichen Händler',
+            pl: 'Zakup u miejscowego handlarza',
+        },
+    },
+    // Разговор перед витриной. Открывается только тогда, когда игроку есть что предложить -
+    // иначе торговец сразу показывает прилавок.
+    dialogs: {
+        localSeller: {
+            welcome: {
+                ru: 'Здорово. Ты по делу или так, поглазеть? Показать товар или сам что-то принёс?',
+                ua: 'Вітаю. Ти у справі чи так, роздивитися? Показати товар чи сам щось приніс?',
+                en: 'Afternoon. Here on business, or just looking? Want to see the goods, or did you bring something?',
+                de: 'Tag. Geschäftlich hier oder nur zum Schauen? Soll ich die Ware zeigen, oder hast du selbst etwas dabei?',
+                pl: 'Dzień dobry. W interesach czy tak, popatrzeć? Pokazać towar, czy sam coś przyniosłeś?',
+            },
+            buy: {
+                ru: 'Покажи товар',
+                ua: 'Покажи товар',
+                en: 'Show me the goods',
+                de: 'Zeig mir die Ware',
+                pl: 'Pokaż towar',
+            },
+            sell: {
+                ru: 'У меня есть что продать',
+                ua: 'У мене є що продати',
+                en: 'I have something to sell',
+                de: 'Ich habe etwas zu verkaufen',
+                pl: 'Mam coś do sprzedania',
+            },
+            leave: {
+                ru: 'В другой раз',
+                ua: 'Іншого разу',
+                en: 'Another time',
+                de: 'Ein andermal',
+                pl: 'Innym razem',
+            },
+        },
+        illegalSeller: {
+            welcome: {
+                ru: 'Чего надо? Товар глянуть или сам что-то притащил?',
+                ua: 'Чого треба? Товар глянути чи сам щось притягнув?',
+                en: 'What do you want? Here for the goods, or did you bring something yourself?',
+                de: 'Was willst du? Die Ware ansehen, oder hast du selbst was mitgebracht?',
+                pl: 'Czego chcesz? Obejrzeć towar, czy sam coś przyniosłeś?',
+            },
+            buy: {
+                ru: 'Покажи товар',
+                ua: 'Покажи товар',
+                en: 'Show me the goods',
+                de: 'Zeig mir die Ware',
+                pl: 'Pokaż towar',
+            },
+            sell: {
+                ru: 'У меня есть что продать',
+                ua: 'У мене є що продати',
+                en: 'I have something to sell',
+                de: 'Ich habe etwas zu verkaufen',
+                pl: 'Mam coś do sprzedania',
+            },
+            leave: {
+                ru: 'В другой раз',
+                ua: 'Іншого разу',
+                en: 'Another time',
+                de: 'Ein andermal',
+                pl: 'Innym razem',
+            },
+        },
+    },
+    types: {
+        illegalSeller: {
+            ru: 'Нелегальный торговец',
+            ua: 'Нелегальний торговець',
+            en: 'Illegal Trader',
+            de: 'Illegaler Händler',
+            pl: 'Nielegalny handlarz',
+        },
+        localSeller: {
+            ru: 'Местный торговец',
+            ua: 'Місцевий торговець',
+            en: 'Local seller',
+            de: 'Lokaler Händler',
+            pl: 'Lokalny sprzedawca',
+        },
+    },
+    categories: {
+        misc: {
+            ru: 'Разное',
+            ua: 'Різне',
+            en: 'Misc',
+            de: 'Verschiedenes',
+            pl: 'Inne',
+        },
+        drugs: {
+            ru: 'Наркотики',
+            ua: 'Наркотики',
+            en: 'Drugs',
+            de: 'Drogen',
+            pl: 'Narkotyki',
+        },
+    },
+    waitSms: {
+        ru: 'Ожидай смс об локации посылки',
+        ua: 'Очікуй смс про локацію посилки',
+        en: 'Wait for an SMS with the package location',
+        de: 'Warte auf eine SMS mit dem Standort des Pakets',
+        pl: 'Czekaj na SMS z lokalizacją paczki',
+    },
+    stashSms: {
+        ru: 'Отправил тебе локацию твоей посылки, можешь увидеть в точности на карте. Знай другие игроки недалеко от неё могут попробовать её украсть',
+        ua: 'Відправив тобі локацію твоєї посилки, можеш побачити точно на карті. Знай, інші гравці неподалік можуть спробувати її вкрасти',
+        en: 'Sent you the location of your package, you can see it precisely on the map. Note that other players nearby may try to steal it',
+        de: 'Ich habe dir den Standort deines Pakets geschickt. Beachte, dass Spieler in der Nähe des Pakets versuchen könnten, es zu stehlen',
+        pl: 'Wysłałem ci lokalizację twojej paczki, możesz zobaczyć ją dokładnie na mapie. Pamiętaj, że inni gracze w pobliżu mogą spróbować ją ukraść',
+    },
+    smsToGangs: {
+        ru: 'Держи секретную информацию, недалеко от тебя отправили посылку которую ты можешь перехватить, на карте отображено примерное местоположение!',
+        ua: 'Тримай секретну інформацію, неподалік від тебе відправили посилку, яку ти можеш перехопити, на карті позначено приблизне місцезнаходження!',
+        en: "Here's some secret information: a package was sent near you that you can intercept, its approximate location is marked on the map!",
+        de: 'Hier sind geheime Informationen: In deiner Nähe wurde ein Paket verschickt, das du abfangen kannst, sein ungefährer Standort ist auf der Karte markiert!',
+        pl: 'Oto tajna informacja: w twojej okolicy wysłano paczkę, którą możesz przechwycić, jej przybliżona lokalizacja jest zaznaczona na mapie!',
+    },
+    // Title of the stash's inventory column.
+    stashName: {
+        ru: 'Посылка',
+        ua: 'Посилка',
+        en: 'Package',
+        de: 'Paket',
+        pl: 'Paczka',
+    },
+    youTakedStash: {
+        ru: 'Вы забрали посылку',
+        ua: 'Ви забрали посилку',
+        en: 'You took the package',
+        de: 'Du hast das Paket abgeholt',
+        pl: 'Zabrałeś paczkę',
+    },
+    stashBlip: {
+        ru: 'Ваша посылка',
+        ua: 'Ваша посилка',
+        en: 'Your package',
+        de: 'Dein Paket',
+        pl: 'Twoja paczka',
+    },
+    stashBlipForOthers: {
+        ru: 'Потенциальная закладка',
+        ua: 'Потенцiйна закладка',
+        en: 'Potential stash',
+        de: 'Potentielles Versteck',
+        pl: 'Potencjalna skrytka',
+    },
+    looksLikeSomeoneStolenYourStash: {
+        ru: 'Похоже кто-то нашёл вашу посылку раньше вас, анлак...',
+        ua: 'Схоже, хтось знайшов вашу посилку раніше за вас, анлак...',
+        en: 'Looks like someone found your package before you, unlucky...',
+        de: 'Jemand dein Paket vor dir abgeholt, Pech gehabt...',
+        pl: 'Wygląda na to, że ktoś znalazł twoją paczkę przed tobą, pech...',
+    },
+    // The owner opens a stash someone else has already taken from.
+    stashTouched: {
+        ru: 'Похоже, кто-то нашёл вашу посылку раньше вас и что-то из неё забрал',
+        ua: 'Схоже, хтось знайшов вашу посилку раніше за вас і щось із неї забрав',
+        en: 'Looks like someone found your package before you and took something from it',
+        de: 'Sieht so aus, als hätte jemand dein Paket vor dir gefunden und etwas daraus genommen',
+        pl: 'Wygląda na to, że ktoś znalazł twoją paczkę przed tobą i coś z niej zabrał',
+    },
+    alreadyHaveIllegalOrder: {
+        ru: 'У вас есть активная посылка, чем скорее заберите её',
+        ua: 'У вас є активна посилка, якнайшвидше заберіть її',
+        en: 'You have an active package, pick it up as soon as possible',
+        de: 'Du hast ein aktives Paket, hole es so schnell wie möglich ab',
+        pl: 'Masz aktywną paczkę, odbierz ją jak najszybciej',
+    },
+
+    productIsOutOfStock: {
+        ru: 'Товар "{{name}}" закончился или недостаточно в наличии.',
+        ua: 'Товар "{{name}}" закінчився або недостатньо в наявності.',
+        en: 'The item "{{name}}" is out of stock or not available in sufficient quantity.',
+        de: 'Der Artikel "{{name}}" ist ausverkauft oder nicht in ausreichender Menge verfügbar.',
+        pl: 'Produkt "{{name}}" jest wyprzedany lub nie jest dostępny w wystarczającej ilości.',
+    },
+    noPositionsRightNow: {
+        ru: 'Сейчас не получится доставить посылку, попробуй чуть позже...',
+        ua: 'Зараз не вдасться доставити посилку, спробуй трохи пізніше...',
+        en: 'The package cannot be delivered right now, try again a bit later...',
+        de: 'Das Paket kann derzeit nicht zugestellt werden, versuche es später noch einmal...',
+        pl: 'Nie można teraz dostarczyć paczki, spróbuj ponownie trochę później...',
+    },
+};

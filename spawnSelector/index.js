@@ -1,0 +1,166 @@
+export default {
+    mainHeader: {
+        ru: 'Выбор точки спавна',
+        ua: 'Вибір точки спавна',
+        en: 'Choosing a spawn point',
+        de: 'Auswahl eines Spawnpunkts',
+        pl: 'Wybór punktu odrodzenia',
+    },
+    lastPos: {
+        ru: 'Место выхода',
+        ua: 'Місце виходу',
+        en: 'Exit point',
+        de: 'Ausgangspunkt',
+        pl: 'Punkt wyjścia',
+    },
+    // Name of the last exit place in the point card: instead of "Exit point" the player
+    // sees where exactly they are coming back to.
+    places: {
+        casino: {
+            ru: 'Казино',
+            ua: 'Казино',
+            en: 'Casino',
+            de: 'Kasino',
+            pl: 'Kasyno',
+        },
+        house: {
+            ru: 'Дом #{{id}}',
+            ua: 'Будинок #{{id}}',
+            en: 'House #{{id}}',
+            de: 'Haus #{{id}}',
+            pl: 'Dom #{{id}}',
+        },
+        houseGarage: {
+            ru: 'Гараж дома #{{id}}',
+            ua: 'Гараж будинку #{{id}}',
+            en: 'Garage of house #{{id}}',
+            de: 'Garage von Haus #{{id}}',
+            pl: 'Garaż domu #{{id}}',
+        },
+        office: {
+            ru: 'Офис {{slotId}}, {{building}}',
+            ua: 'Офіс {{slotId}}, {{building}}',
+            en: 'Office {{slotId}}, {{building}}',
+            de: 'Büro {{slotId}}, {{building}}',
+            pl: 'Biuro {{slotId}}, {{building}}',
+        },
+        officeGarage: {
+            ru: 'Гараж {{garage}}, {{building}}',
+            ua: 'Гараж {{garage}}, {{building}}',
+            en: 'Garage {{garage}}, {{building}}',
+            de: 'Garage {{garage}}, {{building}}',
+            pl: 'Garaż {{garage}}, {{building}}',
+        },
+        warehouse: {
+            ru: 'Склад {{slotId}}, {{building}}',
+            ua: 'Склад {{slotId}}, {{building}}',
+            en: 'Warehouse {{slotId}}, {{building}}',
+            de: 'Lager {{slotId}}, {{building}}',
+            pl: 'Magazyn {{slotId}}, {{building}}',
+        },
+    },
+
+    inActiveTextDefault: {
+        ru: 'В настоящее время это невозможно',
+        ua: 'На данний час це неможливо',
+        en: 'This is currently impossible',
+        de: 'Dies ist derzeit nicht möglich',
+        pl: 'To jest obecnie niemożliwe',
+    },
+    vehicleRent: {
+        header: {
+            ru: 'Аренда транспорта',
+            ua: 'Оренда транспорту',
+            en: 'Vehicle rental',
+            de: 'Vermietung von Transportmitteln',
+            pl: 'Wynajem pojazdów',
+        },
+    },
+
+    play: {
+        ru: 'Играть',
+        ua: 'Грати',
+        en: 'Play',
+        de: 'Spielen',
+        pl: 'Grać',
+    },
+
+    spawnPoint: {
+        header: {
+            ru: 'Точка спавна',
+            ua: 'Точка спавна',
+            en: 'Spawn Point',
+            de: 'Spawnpunkt',
+            pl: 'Punkt odrodzenia',
+        },
+    },
+
+    house: {
+        header: {
+            ru: 'Дом',
+            ua: 'Будинок',
+            en: 'House',
+            de: 'Haus',
+            pl: 'Dom',
+        },
+        inActiveText: {
+            ru: 'У вас нет дома',
+            ua: 'У вас немає дома',
+            en: "You don't have a home",
+            de: 'Du hast kein Zuhause',
+            pl: 'Nie masz domu',
+        },
+    },
+
+    apartment: {
+        header: {
+            ru: 'Квартира',
+            ua: 'Квартира',
+            en: 'Apartment',
+            de: 'Wohnung',
+            pl: 'Mieszkanie',
+        },
+
+        inActiveText: {
+            ru: 'У вас нет квартиры',
+            ua: 'У вас немає квартири',
+            en: "You don't have an apartment",
+            de: 'Du hast keine Wohnung',
+            pl: 'Nie masz mieszkania',
+        },
+    },
+
+    faction: {
+        header: {
+            ru: 'Организация',
+            ua: 'Організація',
+            en: 'Organization',
+            de: 'Organisation',
+            pl: 'Organizacja',
+        },
+        inActiveText: {
+            ru: 'Вы не находитесь в организации',
+            ua: 'Ви не перебуваєте у організаціі',
+            en: 'You are not in the organization',
+            de: 'Du bist in keiner Organisation',
+            pl: 'Nie należysz do organizacji',
+        },
+    },
+
+    mansion: {
+        header: {
+            ru: 'Особняк',
+            ua: 'Особняк',
+            en: 'Mansion',
+            de: 'Villa',
+            pl: 'Rezydencja',
+        },
+        inActiveText: {
+            ru: 'У вашей семье нет особняка или вы не состоите в семье',
+            ua: "У вашоі сім'ї не має особняка або ви не перебуваєте у сім'ї",
+            en: 'Your family does not have a mansion or you are not in a family',
+            de: 'Deine Familie besitzt keine Villa',
+            pl: 'Twoja rodzina nie ma rezydencji lub nie należysz do rodziny',
+        },
+    },
+};
