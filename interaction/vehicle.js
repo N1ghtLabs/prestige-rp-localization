@@ -1,0 +1,1065 @@
+export const vehicle = {
+    // Категории колеса взаимодействия
+    vehicleControl: {
+        ru: 'Управление',
+        ua: 'Керування',
+        en: 'Controls',
+        de: 'Steuerung',
+        pl: 'Sterowanie',
+        zh: '控制',
+    },
+
+    vehicleCabin: {
+        ru: 'Салон',
+        ua: 'Салон',
+        en: 'Cabin',
+        de: 'Innenraum',
+        pl: 'Kabina',
+        zh: '车内',
+    },
+
+    vehicleTuning: {
+        ru: 'Оснащение',
+        ua: 'Оснащення',
+        en: 'Equipment',
+        de: 'Ausstattung',
+        pl: 'Wyposażenie',
+        zh: '装备',
+    },
+
+    vehicleService: {
+        ru: 'Обслуживание',
+        ua: 'Обслуговування',
+        en: 'Service',
+        de: 'Wartung',
+        pl: 'Serwis',
+        zh: '维护',
+    },
+
+    vehicleTransfer: {
+        ru: 'Передача',
+        ua: 'Передача',
+        en: 'Transfer',
+        de: 'Übergabe',
+        pl: 'Przekazanie',
+        zh: '转让',
+    },
+
+    vehicleInfo: {
+        ru: 'Информация',
+        ua: 'Інформація',
+        en: 'Information',
+        de: 'Informationen',
+        pl: 'Informacje',
+        zh: '信息',
+    },
+
+    trunk: {
+        ru: 'Багажник',
+        ua: 'Багажник',
+        en: 'Trunk',
+        de: 'Kofferraum',
+        pl: 'Bagażnik',
+        zh: '行李',
+    },
+
+    engine: {
+        ru: 'Двигатель',
+        ua: 'Двигун',
+        en: 'Engine',
+        de: 'Motor',
+        pl: 'Silnik',
+        zh: '引擎',
+    },
+
+    musicPlayer: {
+        ru: 'Плеер',
+        ua: 'Плеєр',
+        en: 'Player',
+        de: 'Player',
+        pl: 'Odtwarzacz',
+    },
+
+    passengers: {
+        ru: 'Пассажиры',
+        ua: 'Пасажири',
+        en: 'Passengers',
+        de: 'Mitfahrer',
+        pl: 'Pasażerowie',
+        zh: '乘客',
+    },
+
+    lock: {
+        ru: 'Закрыть',
+        ua: 'Закрити',
+        en: 'Lock',
+        de: 'Abschließen',
+        pl: 'Zablokować',
+        zh: '锁定',
+    },
+
+    unlock: {
+        ru: 'Открыть',
+        ua: 'Відкрити',
+        en: 'Unlock',
+        de: 'Aufschließen',
+        pl: 'Odblokować',
+        zh: '解锁',
+    },
+
+    airSuspension: {
+        ru: 'Пневмоподвеска',
+        ua: 'Пневмопідвіска',
+        en: 'Air suspension',
+        de: 'Luftfederung',
+        pl: 'Zawieszenie pneumatyczne',
+        zh: '空气悬挂',
+    },
+
+    'airSuspension-setup': {
+        ru: 'Настройка',
+        ua: 'Налаштування',
+        en: 'Setup',
+        de: 'Einstellung',
+        pl: 'Ustawienia',
+        zh: '设置',
+    },
+
+    'airSuspension-down': {
+        ru: 'Нижнее положение',
+        ua: 'Нижнє положення',
+        en: 'Lower position',
+        de: 'Untere Position',
+        pl: 'Pozycja dolna',
+        zh: '最低位置',
+    },
+
+    'airSuspension-up': {
+        ru: 'Верхнее положение',
+        ua: 'Верхнє положення',
+        en: 'Upper position',
+        de: 'Obere Position',
+        pl: 'Pozycja górna',
+        zh: '最高位置',
+    },
+
+    'airSuspension-auto-on': {
+        ru: 'Включить авторежим',
+        ua: 'Увімкнути авторежим',
+        en: 'Enable auto mode',
+        de: 'Automodus einschalten',
+        pl: 'Włącz tryb auto',
+        zh: '开启自动模式',
+    },
+
+    'airSuspension-auto-off': {
+        ru: 'Выключить авторежим',
+        ua: 'Вимкнути авторежим',
+        en: 'Disable auto mode',
+        de: 'Automodus ausschalten',
+        pl: 'Wyłącz tryb auto',
+        zh: '关闭自动模式',
+    },
+
+    'strobe': {
+        ru: 'Стробоскопы',
+        ua: 'Стробоскопи',
+        en: 'Strobe kit',
+        de: 'Stroboskope',
+        pl: 'Stroboskopy',
+        zh: '爆闪灯',
+    },
+
+    // Dynamic Drive: подменю со сменой чипа. Названия чипов те же, что в ателье
+    // (tuning.chips.*) - это бренды, одинаковые во всех языках.
+    dynamicDrive: {
+        ru: 'Dynamic Drive Chip',
+        ua: 'Dynamic Drive Chip',
+        en: 'Dynamic Drive Chip',
+        de: 'Dynamic Drive Chip',
+        pl: 'Dynamic Drive Chip',
+        zh: 'Dynamic Drive Chip',
+    },
+
+    'dynamicDrive-chip-standard': {
+        ru: 'Standard',
+        ua: 'Standard',
+        en: 'Standard',
+        de: 'Standard',
+        pl: 'Standard',
+        zh: 'Standard',
+    },
+
+    'dynamicDrive-chip-stage1': {
+        ru: 'Stage 1',
+        ua: 'Stage 1',
+        en: 'Stage 1',
+        de: 'Stage 1',
+        pl: 'Stage 1',
+        zh: 'Stage 1',
+    },
+
+    'dynamicDrive-chip-stage2': {
+        ru: 'Stage 2',
+        ua: 'Stage 2',
+        en: 'Stage 2',
+        de: 'Stage 2',
+        pl: 'Stage 2',
+        zh: 'Stage 2',
+    },
+
+    'dynamicDrive-chip-stage3': {
+        ru: 'Stage 3',
+        ua: 'Stage 3',
+        en: 'Stage 3',
+        de: 'Stage 3',
+        pl: 'Stage 3',
+        zh: 'Stage 3',
+    },
+
+    'dynamicDrive-chip-drift': {
+        ru: 'Drift',
+        ua: 'Drift',
+        en: 'Drift',
+        de: 'Drift',
+        pl: 'Drift',
+        zh: 'Drift',
+    },
+
+    'dynamicDrive-chip-awd': {
+        ru: 'All-wheel drive',
+        ua: 'All-wheel drive',
+        en: 'All-wheel drive',
+        de: 'All-wheel drive',
+        pl: 'All-wheel drive',
+        zh: 'All-wheel drive',
+    },
+
+    'dynamicDrive-chip-rwd': {
+        ru: 'Rear-wheel drive',
+        ua: 'Rear-wheel drive',
+        en: 'Rear-wheel drive',
+        de: 'Rear-wheel drive',
+        pl: 'Rear-wheel drive',
+        zh: 'Rear-wheel drive',
+    },
+
+    'strobe-mode-doubleBurst': {
+        ru: 'Дуплет',
+        ua: 'Дуплет',
+        en: 'Double burst',
+        de: 'Doppelsalve',
+        pl: 'Dublet',
+        zh: '双联闪',
+    },
+
+    'strobe-mode-off-doubleBurst': {
+        ru: 'Отключить режим "Дуплет"',
+        ua: 'Вимкнути режим "Дуплет"',
+        en: 'Stop the "Double burst" mode',
+        de: 'Modus "Doppelsalve" beenden',
+        pl: 'Wyłącz tryb "Dublet"',
+        zh: '关闭"双联闪"模式',
+    },
+
+    'strobe-mode-alternate': {
+        ru: 'Чередование',
+        ua: 'Чергування',
+        en: 'Alternating',
+        de: 'Wechselblitz',
+        pl: 'Naprzemienne',
+        zh: '交替闪烁',
+    },
+
+    'strobe-mode-off-alternate': {
+        ru: 'Отключить режим "Чередование"',
+        ua: 'Вимкнути режим "Чергування"',
+        en: 'Stop the "Alternating" mode',
+        de: 'Modus "Wechselblitz" beenden',
+        pl: 'Wyłącz tryb "Naprzemienne"',
+        zh: '关闭"交替闪烁"模式',
+    },
+
+    'strobe-mode-sweep': {
+        ru: 'Перелив',
+        ua: 'Перелив',
+        en: 'Sweep',
+        de: 'Überblendung',
+        pl: 'Przelewanie',
+        zh: '流光',
+    },
+
+    'strobe-mode-off-sweep': {
+        ru: 'Отключить режим "Перелив"',
+        ua: 'Вимкнути режим "Перелив"',
+        en: 'Stop the "Sweep" mode',
+        de: 'Modus "Überblendung" beenden',
+        pl: 'Wyłącz tryb "Przelewanie"',
+        zh: '关闭"流光"模式',
+    },
+
+    'strobe-mode-slowFast': {
+        ru: 'Разгон',
+        ua: 'Розгін',
+        en: 'Build-up',
+        de: 'Steigerung',
+        pl: 'Rozpędzanie',
+        zh: '渐快',
+    },
+
+    'strobe-mode-off-slowFast': {
+        ru: 'Отключить режим "Разгон"',
+        ua: 'Вимкнути режим "Розгін"',
+        en: 'Stop the "Build-up" mode',
+        de: 'Modus "Steigerung" beenden',
+        pl: 'Wyłącz tryb "Rozpędzanie"',
+        zh: '关闭"渐快"模式',
+    },
+
+    'strobe-mode-doubleTap': {
+        ru: 'Двойная вспышка',
+        ua: 'Подвійний спалах',
+        en: 'Double tap',
+        de: 'Doppelschlag',
+        pl: 'Podwójny błysk',
+        zh: '双击闪',
+    },
+
+    'strobe-mode-off-doubleTap': {
+        ru: 'Отключить режим "Двойная вспышка"',
+        ua: 'Вимкнути режим "Подвійний спалах"',
+        en: 'Stop the "Double tap" mode',
+        de: 'Modus "Doppelschlag" beenden',
+        pl: 'Wyłącz tryb "Podwójny błysk"',
+        zh: '关闭"双击闪"模式',
+    },
+
+    'strobe-mode-police': {
+        ru: 'Патруль',
+        ua: 'Патруль',
+        en: 'Patrol',
+        de: 'Streife',
+        pl: 'Patrol',
+        zh: '巡逻',
+    },
+
+    'strobe-mode-off-police': {
+        ru: 'Отключить режим "Патруль"',
+        ua: 'Вимкнути режим "Патруль"',
+        en: 'Stop the "Patrol" mode',
+        de: 'Modus "Streife" beenden',
+        pl: 'Wyłącz tryb "Patrol"',
+        zh: '关闭"巡逻"模式',
+    },
+
+    'strobe-mode-policeAlert': {
+        ru: 'Тревога',
+        ua: 'Тривога',
+        en: 'Alert',
+        de: 'Alarm',
+        pl: 'Alarm',
+        zh: '警报',
+    },
+
+    'strobe-mode-off-policeAlert': {
+        ru: 'Отключить режим "Тревога"',
+        ua: 'Вимкнути режим "Тривога"',
+        en: 'Stop the "Alert" mode',
+        de: 'Modus "Alarm" beenden',
+        pl: 'Wyłącz tryb "Alarm"',
+        zh: '关闭"警报"模式',
+    },
+
+    'strobe-mode-policeIntercept': {
+        ru: 'Перехват',
+        ua: 'Перехоплення',
+        en: 'Intercept',
+        de: 'Abfangen',
+        pl: 'Przechwycenie',
+        zh: '拦截',
+    },
+
+    'strobe-mode-off-policeIntercept': {
+        ru: 'Отключить режим "Перехват"',
+        ua: 'Вимкнути режим "Перехоплення"',
+        en: 'Stop the "Intercept" mode',
+        de: 'Modus "Abfangen" beenden',
+        pl: 'Wyłącz tryb "Przechwycenie"',
+        zh: '关闭"拦截"模式',
+    },
+
+    'strobe-mode-swell': {
+        ru: 'Разгорание',
+        ua: 'Розгорання',
+        en: 'Swell',
+        de: 'Anschwellen',
+        pl: 'Narastanie',
+        zh: '渐亮',
+    },
+
+    'strobe-mode-off-swell': {
+        ru: 'Отключить режим "Разгорание"',
+        ua: 'Вимкнути режим "Розгорання"',
+        en: 'Stop the "Swell" mode',
+        de: 'Modus "Anschwellen" beenden',
+        pl: 'Wyłącz tryb "Narastanie"',
+        zh: '关闭"渐亮"模式',
+    },
+
+    'strobe-mode-rgbStrobe': {
+        ru: 'Радуга: строб',
+        ua: 'Веселка: строб',
+        en: 'Rainbow: strobe',
+        de: 'Regenbogen: Strobo',
+        pl: 'Tęcza: stroboskop',
+        zh: '彩虹：频闪',
+    },
+
+    'strobe-mode-off-rgbStrobe': {
+        ru: 'Отключить режим "Радуга: строб"',
+        ua: 'Вимкнути режим "Веселка: строб"',
+        en: 'Stop the "Rainbow: strobe" mode',
+        de: 'Modus "Regenbogen: Strobo" beenden',
+        pl: 'Wyłącz tryb "Tęcza: stroboskop"',
+        zh: '关闭"彩虹：频闪"模式',
+    },
+
+    'strobe-mode-rgbSweep': {
+        ru: 'Радуга: перелив',
+        ua: 'Веселка: перелив',
+        en: 'Rainbow: sweep',
+        de: 'Regenbogen: Überblendung',
+        pl: 'Tęcza: przelewanie',
+        zh: '彩虹：流光',
+    },
+
+    'strobe-mode-off-rgbSweep': {
+        ru: 'Отключить режим "Радуга: перелив"',
+        ua: 'Вимкнути режим "Веселка: перелив"',
+        en: 'Stop the "Rainbow: sweep" mode',
+        de: 'Modus "Regenbogen: Überblendung" beenden',
+        pl: 'Wyłącz tryb "Tęcza: przelewanie"',
+        zh: '关闭"彩虹：流光"模式',
+    },
+
+    'strobe-mode-rgbPulse': {
+        ru: 'Радуга: вспышки',
+        ua: 'Веселка: спалахи',
+        en: 'Rainbow: pulses',
+        de: 'Regenbogen: Impulse',
+        pl: 'Tęcza: błyski',
+        zh: '彩虹：脉冲',
+    },
+
+    'strobe-mode-off-rgbPulse': {
+        ru: 'Отключить режим "Радуга: вспышки"',
+        ua: 'Вимкнути режим "Веселка: спалахи"',
+        en: 'Stop the "Rainbow: pulses" mode',
+        de: 'Modus "Regenbogen: Impulse" beenden',
+        pl: 'Wyłącz tryb "Tęcza: błyski"',
+        zh: '关闭"彩虹：脉冲"模式',
+    },
+
+    'strobe-mode-rgbWave': {
+        ru: 'Радуга: волна',
+        ua: 'Веселка: хвиля',
+        en: 'Rainbow: wave',
+        de: 'Regenbogen: Welle',
+        pl: 'Tęcza: fala',
+        zh: '彩虹：流波',
+    },
+
+    'strobe-mode-off-rgbWave': {
+        ru: 'Отключить режим "Радуга: волна"',
+        ua: 'Вимкнути режим "Веселка: хвиля"',
+        en: 'Stop the "Rainbow: wave" mode',
+        de: 'Modus "Regenbogen: Welle" beenden',
+        pl: 'Wyłącz tryb "Tęcza: fala"',
+        zh: '关闭"彩虹：流波"模式',
+    },
+
+    'strobe-mode-music': {
+        ru: 'Под музыку',
+        ua: 'Під музику',
+        en: 'To the music',
+        de: 'Nach der Musik',
+        pl: 'Do muzyki',
+        zh: '随音乐',
+    },
+
+    'strobe-mode-off-music': {
+        ru: 'Отключить режим "Под музыку"',
+        ua: 'Вимкнути режим "Під музику"',
+        en: 'Stop the "To the music" mode',
+        de: 'Modus "Nach der Musik" beenden',
+        pl: 'Wyłącz tryb "Do muzyki"',
+        zh: '关闭"随音乐"模式',
+    },
+    'airSuspension-modes': {
+        ru: 'Режимы',
+        ua: 'Режими',
+        en: 'Modes',
+        de: 'Modi',
+        pl: 'Tryby',
+        zh: '模式',
+    },
+
+    'airSuspension-mode-bounce': {
+        ru: 'Подпрыгивание',
+        ua: 'Підстрибування',
+        en: 'Bouncing',
+        de: 'Hüpfen',
+        pl: 'Podskakiwanie',
+        zh: '弹跳',
+    },
+
+    'airSuspension-mode-off-bounce': {
+        ru: 'Отключить режим "Подпрыгивание"',
+        ua: 'Вимкнути режим "Підстрибування"',
+        en: 'Stop the "Bouncing" mode',
+        de: 'Modus "Hüpfen" beenden',
+        pl: 'Wyłącz tryb "Podskakiwanie"',
+        zh: '关闭"弹跳"模式',
+    },
+
+    'airSuspension-mode-roll': {
+        ru: 'Перекачивание',
+        ua: 'Перекачування',
+        en: 'Rocking',
+        de: 'Schaukeln',
+        pl: 'Kołysanie',
+        zh: '左右摇摆',
+    },
+
+    'airSuspension-mode-off-roll': {
+        ru: 'Отключить режим "Перекачивание"',
+        ua: 'Вимкнути режим "Перекачування"',
+        en: 'Stop the "Rocking" mode',
+        de: 'Modus "Schaukeln" beenden',
+        pl: 'Wyłącz tryb "Kołysanie"',
+        zh: '关闭"左右摇摆"模式',
+    },
+
+    'airSuspension-mode-pitch': {
+        ru: 'Качели',
+        ua: 'Гойдалка',
+        en: 'See-saw',
+        de: 'Wippe',
+        pl: 'Huśtawka',
+        zh: '前后跷跷板',
+    },
+
+    'airSuspension-mode-off-pitch': {
+        ru: 'Отключить режим "Качели"',
+        ua: 'Вимкнути режим "Гойдалка"',
+        en: 'Stop the "See-saw" mode',
+        de: 'Modus "Wippe" beenden',
+        pl: 'Wyłącz tryb "Huśtawka"',
+        zh: '关闭"前后跷跷板"模式',
+    },
+
+    'airSuspension-mode-circle': {
+        ru: 'Волна',
+        ua: 'Хвиля',
+        en: 'Wave',
+        de: 'Welle',
+        pl: 'Fala',
+        zh: '环绕波浪',
+    },
+
+    'airSuspension-mode-off-circle': {
+        ru: 'Отключить режим "Волна"',
+        ua: 'Вимкнути режим "Хвиля"',
+        en: 'Stop the "Wave" mode',
+        de: 'Modus "Welle" beenden',
+        pl: 'Wyłącz tryb "Fala"',
+        zh: '关闭"环绕波浪"模式',
+    },
+
+    autopilot: {
+        ru: 'Автопилот: ехать к метке',
+        ua: 'Автопілот: їхати до мітки',
+        en: 'Autopilot: drive to waypoint',
+        de: 'Autopilot: zum Wegpunkt fahren',
+        pl: 'Autopilot: jedź do punktu trasy',
+        zh: '自动驾驶：前往路径点',
+    },
+
+    'autopilot-off': {
+        ru: 'Отключить автопилот',
+        ua: 'Вимкнути автопілот',
+        en: 'Disengage autopilot',
+        de: 'Autopilot deaktivieren',
+        pl: 'Wyłącz autopilota',
+        zh: '关闭自动驾驶',
+    },
+
+    'burglar-loadTrunk': {
+        ru: 'Положить в багажник',
+        ua: 'Покласти в багажник',
+        en: 'Put in the trunk',
+        de: 'In den Kofferraum legen',
+        pl: 'Włożyć do bagażnika',
+    },
+
+    'contracts-loadTrunk': {
+        ru: 'Погрузить ящик контракта',
+        ua: 'Завантажити ящик контракту',
+        en: 'Load the contract crate',
+        de: 'Vertragskiste einladen',
+        pl: 'Zaladuj skrzynie kontraktu',
+    },
+
+    'cashCollector-rob': {
+        ru: 'Вскрыть броневик',
+        ua: 'Розкрити броньовик',
+        en: 'Crack the armoured van',
+        de: 'Panzerwagen aufbrechen',
+        pl: 'Rozbic furgon',
+    },
+
+    'trunk-open': {
+        ru: 'Открыть багажник для остальных',
+        ua: 'Відкрити багажник для інших',
+        en: 'Open trunk for others',
+        de: 'Kofferraum für andere öffnen',
+        pl: 'Otwórz bagażnik dla innych',
+        zh: '为别人打开后备箱',
+    },
+
+    'trunk-close': {
+        ru: 'Закрыть багажник для остальных',
+        ua: 'Закрити багажник для інших',
+        en: 'Close trunk for others',
+        de: 'Kofferraum für andere schließen',
+        pl: 'Zamknij bagażnik dla innych',
+        zh: '为他人关闭后备箱',
+    },
+
+    'interiorLight-on': {
+        ru: 'Включить свет в салоне',
+        ua: 'Увімкнути світло в салоні',
+        en: 'Turn on the cabin light',
+        de: 'Innenbeleuchtung einschalten',
+        pl: 'Włącz oświetlenie kabiny',
+        zh: '打开车内照明',
+    },
+
+    'interiorLight-off': {
+        ru: 'Выключить свет в салоне',
+        ua: 'Вимкнути світло в салоні',
+        en: 'Turn off the cabin light',
+        de: 'Innenbeleuchtung ausschalten',
+        pl: 'Wyłącz oświetlenie kabiny',
+        zh: '关闭车内照明',
+    },
+
+    'kick-all': {
+        ru: 'Выгнать всех',
+        ua: 'Вигнати всіх',
+        en: 'Kick out all',
+        de: 'Alle rauswerfen',
+        pl: 'Wyrzuć wszystkich',
+        zh: '把所有人都踢出去',
+    },
+    refuel: {
+        ru: 'Заправить с канистры',
+        ua: 'Заправити з каністри',
+        en: 'Refuel from a canister',
+        de: 'Mit einem Kanister tanken',
+        pl: 'Zatankować z kanistra',
+        ge: 'გაავსე კანისტრიდან',
+        zh: '从罐中加油',
+    },
+    recharge: {
+        ru: 'Зарядить зарядной станцией',
+        ua: 'Зарядити зарядною станцією',
+        en: 'Recharge at a charging station',
+        de: 'An einer Ladestation aufladen',
+        pl: 'Naładować na stacji ładowania',
+        ge: 'დატენეთ დამტენი სადგურით',
+        zh: '在充电站充电时',
+    },
+
+    //
+
+    frisk: {
+        ru: 'Обыск автомобиля',
+        ua: 'Огляд автомобіля',
+        en: 'Car frisk',
+        de: 'Durchsuchung des Fahrzeugs',
+        pl: 'Przeszukanie samochodu',
+    },
+
+    faction: {
+        ru: 'Фракционное',
+        en: 'Faction',
+        ua: 'Фракційне',
+        de: 'Fraktion',
+        pl: 'Frakcja',
+        zh: '功能性',
+    },
+
+    putToVehicle: {
+        ru: 'Посадить в машину',
+        ua: 'Посадити в машину',
+        en: 'Put in vehicle',
+        de: 'Ins Fahrzeug setzen',
+        pl: 'Posadzić w samochodzie',
+        zh: '放进车里',
+    },
+    takeFromVehicle: {
+        ru: 'Вытащить из машины',
+        ua: 'Витягнути з машини',
+        en: 'Take out of vehicle',
+        de: 'Aus dem Fahrzeug nehmen',
+        pl: 'Wyciągnąć z samochodu',
+        zh: '下车',
+    },
+    checkVehicle: {
+        ru: 'Проверить машину',
+        ua: 'Перевірити машину',
+        en: 'Check the car',
+        de: 'Überprüfen Sie das Auto',
+        pl: 'Sprawdź samochód',
+        zh: '检查一下车',
+    },
+
+    'repair-car': {
+        ru: 'Починить машину',
+        ua: 'Полагодити машину',
+        en: 'Repair the car',
+        de: 'Auto reparieren',
+        pl: 'Naprawić samochód',
+        zh: '修理汽车',
+    },
+
+    //
+    'sell-for-gov': {
+        ru: 'Продать в ГОС.',
+        ua: 'Продати в ДЕРЖ.',
+        en: 'Sell to GOV.',
+        de: 'An den STAAT verkaufen',
+        pl: 'Sprzedaj do GOV.',
+        zh: '卖给政府',
+    },
+    'transfer-to-faction': {
+        ru: 'Передать во фракцию',
+        ua: 'Передати у фракцію',
+        en: 'Transfer to faction',
+        de: 'An die Fraktion übergeben',
+        pl: 'Przekaż do frakcji',
+        zh: '转交给帮派',
+    },
+    'transfer-to-organization': {
+        ru: 'Передать в {{name}}',
+        ua: 'Передати у {{name}}',
+        en: 'Transfer to {{name}}',
+        de: 'An {{name}} übergeben',
+        pl: 'Przekaż do {{name}}',
+        zh: '转交给{{name}}',
+    },
+    'remove-plate': {
+        ru: 'Снять номер',
+        ua: 'Зняти номер',
+        en: 'Remove plate',
+        de: 'Kennzeichen abnehmen',
+        pl: 'Zdejmij tablicę',
+        zh: '拆下车牌',
+    },
+    'install-plate': {
+        ru: 'Установить номер',
+        ua: 'Встановити номер',
+        en: 'Mount plate',
+        de: 'Kennzeichen montieren',
+        pl: 'Zamontuj tablicę',
+        zh: '安装车牌',
+    },
+    'faction-despawn': {
+        ru: 'Задеспавнить',
+        ua: 'Задеспавнити',
+        en: 'Despawn',
+        de: 'Despawnen',
+        pl: 'Despawnuj',
+        zh: '回收载具',
+    },
+
+    //
+    'drop-anchor': {
+        ru: 'Сбросить якорь',
+        ua: 'Скинути якір',
+        en: 'Drop anchor',
+        de: 'Anker werfen',
+        pl: 'Zrzucić kotwicę',
+        zh: '抛锚',
+    },
+    'up-anchor': {
+        ru: 'Поднять якорь',
+        ua: 'Підняти якір',
+        en: 'Raise anchor',
+        de: 'Anker lichten',
+        pl: 'Podnieść kotwicę',
+        zh: '起锚',
+    },
+
+    notify: {
+        trunkOpen: {
+            ru: 'Вы открыли багажник, теперь другие люди смогут открыть его.',
+            ua: 'Ви відкрили багажник, тепер інші люди зможуть його відкрити.',
+            en: 'You opened the trunk, now other people can open it.',
+            de: 'Du hast den Kofferraum geöffnet, jetzt können andere Leute darauf zugreifen.',
+            pl: 'Otworzyłeś bagażnik, teraz inni ludzie mogą go otworzyć.',
+            zh: '你打开了后备箱，现在其他人可以打开了',
+        },
+
+        trunkClose: {
+            ru: 'Вы закрыли багажник.',
+            ua: 'Ви закрили багажник.',
+            en: 'You closed the trunk.',
+            de: 'Du hast den Kofferraum geschlossen.',
+            pl: 'Zamknąłeś bagażnik.',
+            zh: '你关上了后备箱',
+        },
+    },
+
+    siren: {
+        ru: 'Сирена',
+        ua: 'Сирена',
+        en: 'Siren',
+        de: 'Sirene',
+        pl: 'Syrena',
+    },
+    'siren-sound': {
+        ru: 'Включить сирену со звуком',
+        ua: 'Увімкнути сирену зі звуком',
+        en: 'Turn on the siren with sound',
+        de: 'Sirene mit Ton einschalten',
+        pl: 'Włącz syrenę z dźwiękiem',
+    },
+    'siren-lights': {
+        ru: 'Включить сирену без звука',
+        ua: 'Увімкнути сирену без звуку',
+        en: 'Turn on the siren without sound',
+        de: 'Sirene ohne Ton einschalten',
+        pl: 'Włącz syrenę bez dźwięku',
+    },
+    'siren-off': {
+        ru: 'Выключить сирену',
+        ua: 'Вимкнути сирену',
+        en: 'Turn off the siren',
+        de: 'Sirene ausschalten',
+        pl: 'Wyłącz syrenę',
+    },
+
+    doorsControl: {
+        ru: 'Управление дверьми',
+        ua: 'Керування дверима',
+        en: 'Doors Control',
+        de: 'Türsteuerung',
+        pl: 'Sterowanie drzwiami',
+    },
+    'doorsControl-driverFrontDoor': {
+        ru: 'Передняя левая дверь',
+        ua: 'Передні ліві двері',
+        en: 'Driver\'s Front Door',
+        de: 'Fahrertür vorne links',
+        pl: 'Przednie lewe drzwi',
+    },
+    'doorsControl-passengerFrontDoor': {
+        ru: 'Передняя правая дверь',
+        ua: 'Передні праві двері',
+        en: 'Passenger\'s Front Door',
+        de: 'Beifahrertür vorne rechts',
+        pl: 'Przednie prawe drzwi',
+    },
+    'doorsControl-driverRearDoor': {
+        ru: 'Задняя левая дверь',
+        ua: 'Задні ліві двері',
+        en: 'Driver\'s Rear Door',
+        de: 'Fahrertür hinten links',
+        pl: 'Tylne lewe drzwi',
+    },
+    'doorsControl-passengerRearDoor': {
+        ru: 'Задняя правая дверь',
+        ua: 'Задні праві двері',
+        en: 'Passenger\'s Rear Door',
+        de: 'Beifahrertür hinten rechts',
+        pl: 'Tylne prawe drzwi',
+    },
+    'doorsControl-hood': {
+        ru: 'Капот',
+        ua: 'Капот',
+        en: 'Hood',
+        de: 'Motorhaube',
+        pl: 'Maska',
+    },
+    'doorsControl-driverFrontDoor-open': {
+        ru: 'Открыть переднюю левую дверь',
+        ua: 'Відкрити передні ліві двері',
+        en: 'Open the front left door',
+        de: 'Vordere linke Tür öffnen',
+        pl: 'Otwórz przednie lewe drzwi',
+    },
+    'doorsControl-driverFrontDoor-close': {
+        ru: 'Закрыть переднюю левую дверь',
+        ua: 'Закрити передні ліві двері',
+        en: 'Close the front left door',
+        de: 'Vordere linke Tür schließen',
+        pl: 'Zamknij przednie lewe drzwi',
+    },
+    'doorsControl-passengerFrontDoor-open': {
+        ru: 'Открыть переднюю правую дверь',
+        ua: 'Відкрити передні праві двері',
+        en: 'Open the front right door',
+        de: 'Vordere rechte Tür öffnen',
+        pl: 'Otwórz przednie prawe drzwi',
+    },
+    'doorsControl-passengerFrontDoor-close': {
+        ru: 'Закрыть переднюю правую дверь',
+        ua: 'Закрити передні праві двері',
+        en: 'Close the front right door',
+        de: 'Vordere rechte Tür schließen',
+        pl: 'Zamknij przednie prawe drzwi',
+    },
+    'doorsControl-driverRearDoor-open': {
+        ru: 'Открыть заднюю левую дверь',
+        ua: 'Відкрити задні ліві двері',
+        en: 'Open the rear left door',
+        de: 'Hintere linke Tür öffnen',
+        pl: 'Otwórz tylne lewe drzwi',
+    },
+    'doorsControl-driverRearDoor-close': {
+        ru: 'Закрыть заднюю левую дверь',
+        ua: 'Закрити задні ліві двері',
+        en: 'Close the rear left door',
+        de: 'Hintere linke Tür schließen',
+        pl: 'Zamknij tylne lewe drzwi',
+    },
+    'doorsControl-passengerRearDoor-open': {
+        ru: 'Открыть заднюю правую дверь',
+        ua: 'Відкрити задні праві двері',
+        en: 'Open the rear right door',
+        de: 'Hintere rechte Tür öffnen',
+        pl: 'Otwórz tylne prawe drzwi',
+    },
+    'doorsControl-passengerRearDoor-close': {
+        ru: 'Закрыть заднюю правую дверь',
+        ua: 'Закрити задні праві двері',
+        en: 'Close the rear right door',
+        de: 'Hintere rechte Tür schließen',
+        pl: 'Zamknij tylne prawe drzwi',
+    },
+    'doorsControl-hood-open': {
+        ru: 'Открыть капот',
+        ua: 'Відкрити капот',
+        en: 'Open the hood',
+        de: 'Motorhaube öffnen',
+        pl: 'Otwórz maskę',
+    },
+    'doorsControl-hood-close': {
+        ru: 'Закрыть капот',
+        ua: 'Закрити капот',
+        en: 'Close the hood',
+        de: 'Motorhaube schließen',
+        pl: 'Zamknij maskę',
+    },
+
+    //
+    carjacker: {
+        ru: 'Автоугонщик',
+        ua: 'Автокрадій',
+        en: 'Carjacker',
+        de: 'Autodieb',
+        pl: 'Złodziej samochodów',
+    },
+    brokeWindow: {
+        ru: 'Разбить окно',
+        ua: 'Розбити вікно',
+        en: 'Break the window',
+        de: 'Fenster einschlagen',
+        pl: 'Wybić okno',
+    },
+    startLockpicking: {
+        ru: 'Начать взлом',
+        ua: 'Почати злам',
+        en: 'Start hacking',
+        de: 'Hacken starten',
+        pl: 'Rozpocząć włamanie',
+    },
+
+    // dispatches
+    dispatches: {
+        ru: 'Вызовы',
+        ua: 'Виклики',
+        en: 'Dispatches',
+        de: 'Einsätze',
+        pl: 'Wezwania',
+    },
+
+    database: {
+        ru: 'База данных',
+        ua: 'База даних',
+        en: 'Database',
+        de: 'Datenbank',
+        pl: 'Baza danych',
+    },
+
+    evacuationOrder: {
+        "ru": "Вызвать эвакуатор",
+        "ua": "Викликати евакуатор",
+        "en": "Call a tow truck",
+        "de": "Abschleppwagen rufen",
+        "pl": "Wezwij lawetę",
+    },
+
+    cancelEvacuationOrder: {
+        "ru": "Отменить ордер на эвакуацию",
+        "ua": "Скасувати ордер на евакуацію",
+        "en": "Cancel evacuation order",
+        "de": "Evakuierungsbefehl aufheben",
+        "pl": "Anuluj rozkaz ewakuacji",
+    },
+
+    flatbed: {
+        ru: 'Эвакуатор',
+        ua: 'Евакуатор',
+        en: 'Tow Truck',
+        de: 'Abschleppwagen',
+        pl: 'Laweta',
+    },
+    'flatbed-lower': {
+        ru: 'Опустить платформу',
+        ua: 'Опустити платформу',
+        en: 'Lower the platform',
+        de: 'Plattform absenken',
+        pl: 'Opuść platformę',
+    },
+    'flatbed-raise': {
+        ru: 'Поднять платформу',
+        ua: 'Підняти платформу',
+        en: 'Raise the platform',
+        de: 'Plattform anheben',
+        pl: 'Podnieś platformę',
+    },
+    'flatbed-hookRope': {
+        ru: 'Зацепить трос',
+        ua: 'Зачепити трос',
+        en: 'Hook the rope',
+        de: 'Seil einhaken',
+        pl: 'Zaczep linę',
+    },
+    'flatbed-unhookRope': {
+        ru: 'Отцепить трос',
+        ua: 'Відчепити трос',
+        en: 'Unhook the rope',
+        de: 'Seil aushaken',
+        pl: 'Odczep linę',
+    },
+    flatbedWinchStopped: {
+        ru: 'Лебёдка не может подтянуть машину, трос отцеплен',
+        ua: 'Лебідка не може підтягнути машину, трос відчеплено',
+        en: 'The winch cannot pull the vehicle in, the rope is unhooked',
+        de: 'Die Winde kann das Fahrzeug nicht heranziehen, das Seil wurde ausgehakt',
+        pl: 'Wyciągarka nie może dociągnąć pojazdu, lina została odczepiona',
+    },
+};

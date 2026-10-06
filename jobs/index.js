@@ -1,0 +1,246 @@
+﻿import trucker from './trucker';
+import { trucker2 } from './trucker2/trucker2';
+import foodDelivery from './delivery';
+import bus from './bus';
+import farm from './farm';
+import hunting from './hunting';
+import { quarry } from './quarry/quarry';
+import treasureHunter from './treasureHunter/treasureHunter';
+import mushrooms from './mushrooms/mushrooms';
+import towTruck from './towTruck';
+import burglar from './burglar/burglar';
+
+export default {
+    // ТО ЧТО СВЯЗАНО С РАБОТАМИ
+    list: {
+        // Not a job - the label a requirement uses when it accepts any job at a given rank.
+        any: {
+            ru: 'Любая работа',
+            ua: 'Будь-яка робота',
+            en: 'Any job',
+            de: 'Beliebiger Job',
+            pl: 'Dowolna praca',
+        },
+        trucker: {
+            ru: 'Грузоперевозчик',
+            ua: 'Вантажоперевізник',
+            en: 'Carrier',
+            de: 'Lkw-Fahrer',
+            pl: 'Kierowca ciężarówki',
+            zh: '货物运输司机',
+        },
+        trucker2: {
+            ua: 'Далекобійник',
+            en: 'Trucker',
+            ru: 'Дальнобойщик',
+            de: 'Trucker',
+            pl: 'Kierowca ciężarówki',
+            zh: '长途卡车司机',
+        },
+        farm: {
+            ua: 'Фермер',
+            en: 'Farmer',
+            ru: 'Фермер',
+            de: 'Landwirt',
+            pl: 'Rolnik',
+            zh: '农民',
+        },
+        delivery: {
+            ua: 'Доставник їжі',
+            en: 'Food Delivery',
+            ru: 'Доставщик еды',
+            de: 'Essenslieferant',
+            pl: 'Dostawca jedzenia',
+            zh: '食品配送员',
+        },
+        bus: {
+            ua: 'Водій автобуса',
+            en: 'Bus Driver',
+            ru: 'Автобусник',
+            de: 'Busfahrer',
+            pl: 'Kierowca autobusu',
+            zh: '公交车司机',
+        },
+        hunter: {
+            ru: 'Охотник',
+            ua: 'Мисливець',
+            en: 'Hunter',
+            de: 'Jäger',
+            pl: 'Myśliwy',
+            zh: '猎人',
+        },
+        fishing: {
+            ru: 'Рыбак',
+            ua: 'Рибак',
+            en: 'Fisherman',
+            de: 'Angeln',
+            pl: 'Wędkarstwo',
+            zh: '渔夫',
+        },
+        treasureHunter: {
+            ru: 'Искалатель сокровищ',
+            ua: 'Шукач скарбів',
+            en: 'Treasure Hunter',
+            de: 'Schatzsucher',
+            pl: 'Poszukiwacz skarbów',
+        },
+        quarry: {
+            ru: 'Карьер',
+            ua: "Кар'єр",
+            en: 'Quarry',
+            de: 'Steinbruch',
+            pl: 'Kamieniołom',
+        },
+        carjacker: {
+            ru: 'Автоугонщик',
+            ua: 'Автокрадій',
+            en: 'Carjacker',
+            de: 'Autodieb',
+            pl: 'Złodziej samochodów',
+        },
+        burglar: {
+            ru: 'Домушник',
+            ua: 'Домушник',
+            en: 'Burglar',
+            de: 'Einbrecher',
+            pl: 'Włamywacz',
+        },
+        diver: {
+            ru: 'Водолаз',
+            ua: 'Водолаз',
+            en: 'Diver',
+            de: 'Taucher',
+            pl: 'Nurek',
+        },
+        mushrooms: {
+            ru: 'Грибник',
+            ua: 'Грибник',
+            en: 'Mushroom picker',
+            de: 'Pilzsammler',
+            pl: 'Grzybiarz',
+        },
+        taxi: {
+            ru: 'Водитель такси',
+            ua: 'Водій таксі',
+            en: 'Taxi driver',
+            de: 'Taxifahrer',
+            pl: 'Kierowca taksówki',
+        },
+        garbage: {
+            ru: 'Мусорщик',
+            ua: 'Сміттяр',
+            en: 'Garbage worker',
+            de: 'Mullwerker',
+            pl: 'Smieciarz',
+        },
+        airCargo: {
+            ru: 'Авиагрузчик',
+            ua: 'Авіавантажник',
+            en: 'Air Cargo Loader',
+            de: 'Luftfracht-Verlader',
+            pl: 'Ładowacz lotniczy',
+        },
+        towTruck: {
+            ru: 'Оператор эвакуатора',
+            ua: 'Оператор евакуатора',
+            en: 'Tow Truck Operator',
+            de: 'Abschleppfahrer',
+            pl: 'Operator lawety',
+        },
+        cashCollector: {
+            ru: 'Инкассатор Gruppe 6',
+            ua: 'Інкасатор Gruppe 6',
+            en: 'Gruppe 6 Collector',
+            de: 'Gruppe 6 Geldbote',
+            pl: 'Konwojent Gruppe 6',
+        },
+    },
+    youAlreadyWorking: {
+        ru: 'Вы уже работаете на другой работе, для начала увольтесь с неё',
+        ua: 'Ви вже працюєте на іншій роботі, спочатку звільніться з неї',
+        en: 'You are already working at another job, first resign from it',
+        de: 'Sie arbeiten bereits an einem anderen Arbeitsplatz. Kündigen Sie zuerst dort',
+        pl: 'Już pracujesz w innym miejscu pracy, najpierw zrezygnuj z niego',
+        zh: '你已经在另一个工作岗位上，首先请从那里辞职',
+    },
+    // The one payout notification every job sends (notifySalary in server/jobs/module.ts)
+    payout: {
+        earned: {
+            ru: 'Вы заработали {{amount}}',
+            ua: 'Ви заробили {{amount}}',
+            en: 'You earned {{amount}}',
+            de: 'Du hast {{amount}} verdient',
+            pl: 'Zarobiłeś {{amount}}',
+            zh: '你赚到了 {{amount}}',
+        },
+        statusBonus: {
+            ru: 'бонус {{status}}',
+            ua: 'бонус {{status}}',
+            en: '{{status}} bonus',
+            de: '{{status}}-Bonus',
+            pl: 'bonus {{status}}',
+            zh: '{{status}} 奖励',
+        },
+        tip: {
+            ru: 'чаевые',
+            ua: 'чайові',
+            en: 'tips',
+            de: 'Trinkgeld',
+            pl: 'napiwek',
+            zh: '小费',
+        },
+        extraTasks: {
+            ru: 'за доп. задания',
+            ua: 'за дод. завдання',
+            en: 'for extra tasks',
+            de: 'für Zusatzaufgaben',
+            pl: 'za zadania dodatkowe',
+            zh: '额外任务',
+        },
+        noDamage: {
+            ru: 'за целую машину',
+            ua: 'за цілу машину',
+            en: 'for no damage',
+            de: 'für keinen Schaden',
+            pl: 'za brak uszkodzeń',
+            zh: '无损奖励',
+        },
+        damagePenalty: {
+            ru: 'штраф за повреждения',
+            ua: 'штраф за пошкодження',
+            en: 'damage penalty',
+            de: 'Strafe für Schäden',
+            pl: 'kara za uszkodzenia',
+            zh: '损坏罚款',
+        },
+        groupBonus: {
+            ru: 'бонус группы',
+            ua: 'бонус групи',
+            en: 'group bonus',
+            de: 'Gruppenbonus',
+            pl: 'bonus grupy',
+            zh: '小组奖励',
+        },
+        loadDelivered: {
+            ru: 'за рейс',
+            ua: 'за рейс',
+            en: 'for the run',
+            de: 'für die Tour',
+            pl: 'za kurs',
+            zh: '运送奖励',
+        },
+    },
+
+    // САМИ РАБОТЫ
+    trucker,
+    foodDelivery,
+    bus,
+    farm,
+    trucker2,
+    hunting,
+    quarry,
+    treasureHunter,
+    mushrooms,
+    towTruck,
+    burglar,
+};

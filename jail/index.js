@@ -1,0 +1,47 @@
+export default {
+    prison: {
+        ru: 'Тюрьма',
+        ua: 'Тюрма',
+        en: 'Prison',
+        de: 'Gefängnis',
+        pl: 'Więzienie',
+        zh: '监狱',
+    },
+    releaseMessage: {
+        ru: 'Ваш срок заключения истёк, вы свободны',
+        ua: "Ваш термін ув'язнення минув, ви вільні",
+        en: 'Your sentence has expired, you are free',
+        de: 'Deine Haftzeit ist abgelaufen, du bist frei',
+        pl: 'Twój wyrok się skończył, jesteś wolny',
+        zh: '你的刑期结束了，你自由了',
+    },
+    imprisonmentDetails: {
+        ru: 'Срок заключения: {{minutes}} мин. Причина: {{reason}}',
+        ua: "Термін ув'язнення: {{minutes}} хв. Причина: {{reason}}",
+        en: 'Imprisonment term: {{minutes}} min. Reason: {{reason}}',
+        de: 'Haftdauer: {{minutes}} Min. Grund: {{reason}}',
+        pl: 'Czas uwięzienia: {{minutes}} min. Powód: {{reason}}',
+        zh: '入狱时间：{{minutes}}分钟。原因：{{Reason}}',
+    },
+    demorgran: {
+        ru: 'Деморгран',
+        ua: 'Деморґран',
+        en: 'Demorgran',
+        de: 'Demorgran',
+        pl: 'Demorgran',
+    },
+    timeLeft: {
+        ru: 'Времени осталось',
+        ua: 'Залишилось часу',
+        en: 'Time left',
+        de: 'Verbleibende Zeit',
+        pl: 'Pozostało czasu',
+    },
+    reasonLabel: {
+        ru: 'Причина: {{reason}}',
+        ua: 'Причина: {{reason}}',
+        en: 'Reason: {{reason}}',
+        de: 'Grund: {{reason}}',
+        pl: 'Powód: {{reason}}',
+    },
+};
