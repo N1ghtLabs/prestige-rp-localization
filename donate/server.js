@@ -1,0 +1,359 @@
+export const server = {
+    createdRandomPromo: {
+        ua: 'Створено випадковий промокод ~o~{{promo}} ~w~на ~o~{{sum}} донат валюти ~w~ <br>Він буде діяти рівно ~o~5 хвилин ~w~, встигни ввести його в <br>~g~Меню › Магазин › Промокод',
+        en: 'Created a random promo code ~o~{{promo}} ~w~for ~o~{{sum}} donation currency ~w~ <br>It will work for exactly ~o~5 minutes ~w~, hurry up to enter it in <br>~g~Menu › Store › Promo Code',
+        ru: 'Создан случайный промокод ~o~{{promo}} ~w~на ~o~{{sum}} донат валюты ~w~ <br>Он будет работать ровно ~o~5 минут ~w~, успей ввести его в <br>~g~Меню › Магазин › Промокод',
+        de: 'Ein zufälliger Promo-Code wurde erstellt: ~o~{{promo}} ~w~dieser gibt dir ~o~{{sum}} OlympCoins. ~w~ <br>Er ist genau ~o~5 Minuten ~w~ gültig, beeil dich und gib ihn über <br>~g~Menü › Shop › Promo-Code ein.',
+        pl: 'Utworzono losowy kod promocyjny ~o~{{promo}} ~w~dla ~o~{{sum}} waluty donacyjnej ~w~ <br>Będzie działać przez dokładnie ~o~5 minut ~w~, śpiesz się, aby go wprowadzić w <br>~g~Menu › Sklep › Kod promocyjny',
+        zh: '随机代码~o~{promo}}~w~关于~o~{sum}}货币捐赠~w~<br>它将同样有效~o~5分钟~w~，请在<br>~g~菜单>杂志>代码中输入它',
+    },
+    donatStore: {
+        ua: 'Донат магазин',
+        en: 'Donation store',
+        ru: 'Магазин донатов',
+        de: 'Spenden-Shop',
+        pl: 'Sklep donacji',
+        zh: '捐赠杂志',
+    },
+    notEnoughDonat: {
+        ru: 'Недостаточно донат-валюты',
+        ua: 'Недостатньо донат-валюти',
+        en: 'Not enough donation currency',
+        de: 'Nicht genug Olympcoins',
+        pl: 'Niewystarczająca ilość waluty darowizn',
+        zh: '捐助货币不足',
+    },
+
+    phoneNumberFormatError: {
+        ru: 'Формат номера телефона указан неверно, номер телефона должен быть от 1 до 9 символов и состоять только из цифр, формата, пример: 123456789',
+        ua: 'Формат номера телефону вказано невірно, номер телефону повинен бути від 1 до 9 символів і складатися тільки з цифр, формату, приклад: 123456789',
+        en: 'Incorrect phone number format, the phone number must be from 1 to 9 characters and consist only of digits, format, example: 123456789',
+        de: 'Falsches Telefonnummernformat. Die Telefonnummer muss zwischen 1 und 9 Zeichen lang sein und darf nur aus Ziffern bestehen. Beispiel: 123456789',
+        pl: 'Niepoprawny format numeru telefonu, numer telefonu musi mieć od 1 do 9 znaków i składać się tylko z cyfr, format, przykład: 123456789',
+    },
+
+    phoneNumberExistError: {
+        ru: 'Этот номер телефона уже занят',
+        ua: 'Цей номер телефону вже зайнятий',
+        en: 'This phone number is already taken',
+        de: 'Diese Telefonnummer ist bereits vergeben',
+        pl: 'Ten numer telefonu jest już zajęty',
+    },
+
+    numberPlateFormatError: {
+        ru: 'Формат номера указан неверно: номер должен быть от 2 до 8 символов и состоять только из латинских букв и цифр, пример: AB123',
+        ua: 'Формат номера вказано невірно: номер повинен бути від 2 до 8 символів і складатися тільки з латинських літер та цифр, приклад: AB123',
+        en: 'Incorrect plate format: the number must be 2 to 8 characters long and consist only of Latin letters and digits, example: AB123',
+        de: 'Falsches Kennzeichenformat: Das Kennzeichen muss 2 bis 8 Zeichen lang sein und darf nur aus lateinischen Buchstaben und Ziffern bestehen. Beispiel: AB123',
+        pl: 'Niepoprawny format numeru: numer musi mieć od 2 do 8 znaków i składać się tylko z łacińskich liter i cyfr, przykład: AB123',
+    },
+
+    numberPlateExistError: {
+        ru: 'Этот номер уже занят',
+        ua: 'Цей номер вже зайнятий',
+        en: 'This plate number is already taken',
+        de: 'Dieses Kennzeichen ist bereits vergeben',
+        pl: 'Ten numer jest już zajęty',
+    },
+
+    donateInventory: {
+        ru: 'Донат-инвентарь',
+        ua: 'Донат-інвентар',
+        en: 'Donation inventory',
+        de: 'Spendeninventar',
+        pl: 'Inwentarz donacji',
+        zh: '捐赠清单',
+    },
+
+    sell: {
+        ru: 'Вы продали {{name}} за {{price}} Olymp-Coins',
+        ua: 'Ви продали {{name}} за {{price}} Olymp-Coins',
+        en: 'You sold {{name}} for {{price}} Olymp-Coins',
+        de: 'Du hast {{name}} für {{price}} Olymp-Coins verkauft',
+        pl: 'Sprzedano {{name}} za {{price}} Olymp-Coins',
+        zh: '您需要购买奥林普币',
+    },
+
+    sellForXp: {
+        ru: 'Вы продали {{name}} за {{xp}} опыта пропуска',
+        ua: 'Ви продали {{name}} за {{xp}} досвіду пропуску',
+        en: 'You sold {{name}} for {{xp}} pass XP',
+        de: 'Du hast {{name}} für {{xp}} Pass-XP verkauft',
+        pl: 'Sprzedano {{name}} za {{xp}} XP przepustki',
+        zh: '您以 {{xp}} 通行证经验出售了 {{name}}',
+    },
+
+    sellForXpMaxLevel: {
+        ru: 'Достигнут максимальный уровень пропуска',
+        ua: 'Досягнуто максимальний рівень пропуску',
+        en: 'Pass max level reached',
+        de: 'Maximale Pass-Stufe erreicht',
+        pl: 'Osiągnięto maksymalny poziom przepustki',
+        zh: '已达到通行证最高等级',
+    },
+
+    destroyed: {
+        ru: 'Предмет {{name}} уничтожен',
+        ua: 'Предмет {{name}} знищено',
+        en: 'Item {{name}} destroyed',
+        de: 'Gegenstand {{name}} zerstört',
+        pl: 'Przedmiot {{name}} zniszczony',
+        zh: '物品 {{name}} 已销毁',
+    },
+
+    purchaseNotify: {
+        ru: 'Вы купили {{name}} {{quantity}} шт.',
+        ua: 'Ви купили {{name}} {{quantity}} шт.',
+        en: 'You purchased {{name}} {{quantity}} pcs.',
+        de: 'Du hast {{name}} {{quantity}} Stk. gekauft',
+        pl: 'Kupiono {{name}} {{quantity}} szt.',
+        zh: '您购买了｛｛name｝｝｛｛quantity｝件',
+    },
+
+    donated: {
+        ru: '~w~Спасибо за ваш донат проекту! <br> Вам начислено ~o~{{donateSum}} Olymp-Coins ~w~ваш баланс: ~o~{{balance}} Olymp-Coins',
+        ua: '~w~Дякуємо за ваш донат проекту! <br> Вам нараховано ~o~{{donateSum}} Olymp-Coins ~w~ваш баланс: ~o~{{balance}} Olymp-Coins',
+        en: '~w~Thank you for your donation to the project! <br> You have been credited with ~o~{{donateSum}} Olymp-Coins ~w~your balance: ~o~{{balance}} Olymp-Coins',
+        de: '~w~Danke für deine Spende an das Projekt! <br> Dir wurden ~o~{{donateSum}} Olymp-Coins gutgeschrieben ~w~Dein Kontostand: ~o~{{balance}} Olymp-Coins',
+        pl: '~w~Dziękujemy za darowiznę na rzecz projektu! <br> Zostało Ci przyznane ~o~{{donateSum}} Olymp-Coins ~w~twój stan konta: ~o~{{balance}} Olymp-Coins',
+        zh: '请联系管理',
+    },
+
+    alreadyHasSkin: {
+        ru: 'У вас уже есть этот скин',
+        ua: 'У вас вже є цей скін',
+        en: 'You already have this skin',
+        de: 'Du besitzt diesen Skin bereits',
+        pl: 'Masz już tę skórkę',
+    },
+
+    alreadyHasTattoo: {
+        ru: 'Эта эксклюзивная тату уже разблокирована',
+        ua: 'Це ексклюзивне тату вже розблоковане',
+        en: 'This exclusive tattoo is already unlocked',
+        de: 'Dieses exklusive Tattoo ist bereits freigeschaltet',
+        pl: 'Ten ekskluzywny tatuaż jest już odblokowany',
+    },
+
+    alreadyHasAnimation: {
+        ru: 'Эта эксклюзивная анимация уже разблокирована',
+        ua: 'Ця ексклюзивна анімація вже розблокована',
+        en: 'This exclusive animation is already unlocked',
+        de: 'Diese exklusive Animation ist bereits freigeschaltet',
+        pl: 'Ta ekskluzywna animacja jest już odblokowana',
+    },
+
+    receive: {
+
+        adminGrant: {
+            ru: 'На донат-склад добавлено: {{name}} {{quantity}} шт.',
+            ua: 'На донат-склад додано: {{name}} {{quantity}} шт.',
+            en: 'Added to the donate warehouse: {{name}} {{quantity}} pcs.',
+            de: 'Dem Spendenlager hinzugefügt: {{name}} {{quantity}} Stk.',
+            pl: 'Dodano do magazynu donate: {{name}} {{quantity}} szt.',
+            zh: '已添加到捐赠仓库：{{name}} {{quantity}} 件',
+        },
+
+        tuningInWorkshop: {
+            ru: 'Этот предмет устанавливается в тюнинг-ателье и сгорает там при установке',
+            ua: 'Цей предмет встановлюється в тюнінг-ательє і згорає там при встановленні',
+            en: 'This item is installed at the tuning workshop and is used up there',
+            de: 'Dieser Gegenstand wird in der Tuning-Werkstatt eingebaut und dort verbraucht',
+            pl: 'Ten przedmiot montuje się w warsztacie tuningowym i tam jest zużywany',
+            zh: '此物品在改装工作室安装，安装时消耗',
+        },
+
+        expMain: {
+            ru: 'Получено {{exp}} опыта!',
+            ua: 'Отримано {{exp}} досвіду!',
+            en: 'Received {{exp}} experience!',
+            de: '{{exp}} Erfahrung erhalten!',
+            pl: 'Otrzymano {{exp}} doswiadczenia!',
+            zh: '收到｛｛exp｝｝｝经验！',
+        },
+
+        expTrucker: {
+            ru: 'Получено {{exp}} опыта грузоперевозчика!',
+            ua: 'Отримано {{exp}} досвіду вантажоперевізника!',
+            en: 'Received {{exp}} experience for trucker!',
+            de: '{{exp}} Trucker-Erfahrung erhalten!',
+            pl: 'Otrzymano {{exp}} doswiadczenia dla dostawce!',
+            zh: '获得了卡车司机的{{exp}}经验',
+        },
+
+        expTrucker2: {
+            ru: 'Получено {{exp}} опыта дальнобойщика!',
+            ua: 'Отримано {{exp}} досвіду далекобійника!',
+            en: 'Received {{exp}} experience for trucker!',
+            de: '{{exp}} Fernfahrer-Erfahrung erhalten!',
+            pl: 'Otrzymano {{exp}} doswiadczenia dla dostawce!',
+            zh: '收到｛｛exp｝｝远程玩家体验！',
+        },
+
+        farm: {
+            ru: 'Получено {{exp}} опыта фермы!',
+            ua: 'Отримано {{exp}} досвіду ферми!',
+            en: '{{exp}} farm experience gained!',
+            de: '{{exp}} Farm-Erfahrung erhalten!',
+            pl: 'Zdobyto {{exp}} doświadczenia na farmie!',
+            zh: '获得了农场经验！',
+        },
+
+        fishing: {
+            ru: 'Получено {{exp}} опыта рыбалки!',
+            ua: 'Отримано {{exp}} досвіду рибалки!',
+            en: 'Received {{exp}} experience for fishing!',
+            de: '{{exp}} Angel-Erfahrung erhalten!',
+            pl: 'Otrzymano {{exp}} doswiadczenia dla ryb!',
+            zh: '有钓鱼经验！',
+        },
+
+        hunter: {
+            ru: 'Получено {{exp}} опыта охоты!',
+            ua: 'Отримано {{exp}} досвіду охоти!',
+            en: 'Received {{exp}} experience for hunter!',
+            de: '{{exp}} Jagd-Erfahrung erhalten!',
+            pl: 'Otrzymano {{exp}} doswiadczenia dla łowco!',
+            zh: '有狩猎经验！',
+        },
+
+        quarry: {
+            ru: 'Получено {{exp}} опыта работы на карьере!',
+            ua: "Отримано {{exp}} досвіду роботи на кар'єрі!",
+            en: 'Received {{exp}} quarrying experience!',
+            de: '{{exp}} Erfahrung im Steinbruch erhalten!',
+            pl: 'Otrzymano {{exp}} doświadczenia w pracy w kamieniołomie!',
+        },
+
+        diver: {
+            ru: 'Получено {{exp}} опыта работы для дайвера!',
+            ua: 'Отримано {{exp}} досвіду роботи для дайвера!',
+            en: '{{exp}} work experience gained for the diver!',
+            de: '{{exp}} Taucher-Erfahrung erhalten!',
+            pl: 'Zdobyto {{exp}} doświadczenia zawodowego dla nurka!',
+        },
+
+        treasureHunter: {
+            ru: 'Получено {{exp}} опыта искателя сокровищ!',
+            ua: 'Отримано {{exp}} досвіду шукача скарбів!',
+            en: 'Gained {{exp}} treasure hunter experience!',
+            de: '{{exp}} Schatzsucher-Erfahrung erhalten!',
+            pl: 'Otrzymano {{exp}} doświadczenia poszukiwacza skarbów!',
+        },
+
+        mushrooms: {
+            ru: 'Получено {{exp}} опыта грибника!',
+            ua: 'Отримано {{exp}} досвіду грибника!',
+            en: 'Gained {{exp}} mushrooming experience!',
+            de: '{{exp}} Pilzsammler-Erfahrung erhalten!',
+            pl: 'Zdobyto {{exp}} doświadczenia grzybiarza!',
+        },
+
+        garbage: {
+            ru: 'Получено {{exp}} опыта мусорщика!',
+            ua: 'Отримано {{exp}} досвіду сміттяра!',
+            en: '{{exp}} garbage collector experience received!',
+            de: '{{exp}} Müllmann-Erfahrung erhalten!',
+            pl: 'Otrzymano {{exp}} doświadczenia śmieciarza!',
+        },
+
+        taxi: {
+            ru: 'Получено {{exp}} опыта водителя такси!',
+            ua: 'Отримано {{exp}} досвіду водія таксі!',
+            en: '{{exp}} taxi driver experience received!',
+            de: '{{exp}} Taxifahrer-Erfahrung erhalten!',
+            pl: 'Otrzymano {{exp}} doświadczenia kierowcy taksówki!',
+        },
+
+        currency: {
+            ru: 'Получено ${{currency}}',
+            ua: 'Отримано ${{currency}}',
+            en: 'Received ${{currency}}',
+            de: '${{currency}} erhalten',
+            pl: 'Otrzymano ${{currency}}',
+            zh: '收到${{货币}',
+        },
+
+        vehicle: {
+            ru: 'Получено {{vehicle}}',
+            ua: 'Отримано {{vehicle}}',
+            en: 'Received {{vehicle}}',
+            de: '{{vehicle}} erhalten',
+            pl: 'Otrzymano {{vehicle}}',
+            zh: '收到｛｛车辆｝”中',
+        },
+
+        donate: {
+            ru: 'Получено {{donate}} Olymp-Coins',
+            ua: 'Отримано {{donate}} Olymp-Coins',
+            en: 'Received {{donate}} Olymp-Coins',
+            de: '{{donate}} Olymp-Coins erhalten',
+            pl: 'Otrzymano {{donate}} Olymp-Coins',
+        },
+
+        chips: {
+            ru: 'Получено {{chips}} фишек казино',
+            ua: 'Отримано {{chips}} фішок казино',
+            en: 'Received {{chips}} casino chips',
+            de: '{{chips}} Casino-Chips erhalten',
+            pl: 'Otrzymano {{chips}} żetonów kasyna',
+        },
+
+        freeCoinsOnline: {
+            ru: 'Вы получили {{donate}} Olymp-Coins за {{hours}} часа игры',
+            ua: 'Ви отримали {{donate}} Olymp-Coins за {{hours}} години гри',
+            en: 'You received {{donate}} Olymp-Coins for {{hours}} hours of play',
+            de: 'Du hast {{donate}} Olymp-Coins für {{hours}} Stunden Spielzeit erhalten!',
+            pl: 'Otrzymano {{donate}} Olymp-Coins za {{hours}} godziny gry',
+        },
+
+        item: {
+            ru: '{{item}} {{quantity}} шт. добавлен в ваш инвентарь',
+            ua: '{{item}} {{quantity}} шт. додано до вашого інвентарю',
+            en: '{{item}} {{quantity}} pcs. added to your inventory',
+            de: '{{item}} {{quantity}} Stk. deinem Inventar hinzugefügt',
+            pl: '{{item}} {{quantity}} szt. dodano do twojego ekwipunku',
+        },
+
+        status: {
+            ru: 'Активирован {{status}} статус на {{days}} дней',
+            ua: 'Активовано {{status}} статус на {{days}} днів',
+            en: 'Activated {{status}} status for {{days}} days',
+            de: '{{status}} Status für {{days}} Tage aktiviert',
+            pl: 'Aktywowano status {{status}} na {{days}} dni',
+        },
+
+        skin: {
+            ru: 'Разблокирован новый скин {{skin}}',
+            ua: 'Розблоковано новий скін {{skin}}',
+            en: 'Unlocked new skin {{skin}}',
+            de: 'Neuer Skin {{skin}} freigeschaltet',
+            pl: 'Odblokowano nową skórkę {{skin}}',
+        },
+
+        tattoo: {
+            ru: 'Разблокирована эксклюзивная тату {{tattoo}}',
+            ua: 'Розблоковано ексклюзивне тату {{tattoo}}',
+            en: 'Unlocked exclusive tattoo {{tattoo}}',
+            de: 'Exklusives Tattoo {{tattoo}} freigeschaltet',
+            pl: 'Odblokowano ekskluzywny tatuaż {{tattoo}}',
+        },
+
+        animation: {
+            ru: 'Разблокирована эксклюзивная анимация {{animation}}',
+            ua: 'Розблоковано ексклюзивну анімацію {{animation}}',
+            en: 'Unlocked exclusive animation {{animation}}',
+            de: 'Exklusive Animation {{animation}} freigeschaltet',
+            pl: 'Odblokowano ekskluzywną animację {{animation}}',
+        },
+
+        // Получен кейс (например, награда из BP)
+        case: {
+            ru: 'Получен кейс {{name}} {{quantity}} шт.',
+            ua: 'Отримано кейс {{name}} {{quantity}} шт.',
+            en: 'Received case {{name}} {{quantity}} pcs.',
+            de: 'Case {{name}} {{quantity}} pcs. erhalten',
+            pl: 'Otrzymano kejs {{name}} {{quantity}} szt.',
+        },
+    },
+};
