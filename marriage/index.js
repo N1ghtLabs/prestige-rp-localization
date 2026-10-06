@@ -1,0 +1,356 @@
+export default {
+    header: {
+        ru: 'Брак',
+        ua: 'Шлюб',
+        en: 'Marriage',
+        de: 'Ehe',
+        pl: 'Małżeństwo',
+        zh: '婚姻',
+    },
+
+    dialog: {
+        common: {
+            goodbye: {
+                ru: 'До свидания',
+                ua: 'До побачення',
+                en: 'Goodbye',
+                de: 'Auf Wiedersehen',
+                pl: 'Do widzenia',
+                zh: '再见',
+            },
+            askPriest: {
+                ru: 'Вижу, что-то вас тревожит, отец...',
+                ua: 'Бачу, щось вас турбує, отче...',
+                en: 'I see something troubles you, father...',
+                de: 'Ich sehe, etwas bedrückt dich, Vater...',
+                pl: 'Widzę, że coś księdza trapi...',
+                zh: '我看您似乎心事重重，神父……',
+            },
+        },
+
+        single: {
+            message: {
+                ru: 'Мир тебе, дитя моё. Если хочешь связать свою жизнь священными узами брака с тем, кто находится рядом, я проведу обряд. Стоимость церемонии: {{price}}.',
+                ua: 'Мир тобі, дитя моє. Якщо ти бажаєш поєднати своє життя священними узами шлюбу з тим, хто поруч, я проведу обряд. Вартість церемонії: {{price}}.',
+                en: 'Peace be with you, my child. If you wish to bind your life in sacred matrimony with someone nearby, I shall perform the ceremony. Cost: {{price}}.',
+                de: 'Friede sei mit dir, mein Kind. Wenn du dein Leben mit jemandem in der Nähe durch das heilige Band der Ehe verbinden möchtest, werde ich die Zeremonie vollziehen. Kosten: {{price}}.',
+                pl: 'Pokój z tobą, moje dziecko. Jeśli chcesz związać swoje życie świętym węzłem małżeńskim z kimś, kto jest w pobliżu, przeprowadzę ceremonię. Koszt: {{price}}.',
+                zh: '愿平安与你同在，我的孩子。若你愿意与身边之人结为神圣的连理，我将主持婚礼。费用：{{price}}。',
+            },
+            propose: {
+                ru: 'Предложить руку и сердце',
+                ua: 'Запропонувати руку та серце',
+                en: 'Propose',
+                de: 'Antrag machen',
+                pl: 'Oświadczyć się',
+                zh: '求婚',
+            },
+        },
+
+        married: {
+            message: {
+                ru: 'Ты состоишь в браке с {{spouse}}. Если ваши пути разошлись, я могу провести обряд развода. Стоимость: {{price}}.',
+                ua: 'Ти перебуваєш у шлюбі з {{spouse}}. Якщо ваші шляхи розійшлися, я можу провести обряд розлучення. Вартість: {{price}}.',
+                en: 'You are married to {{spouse}}. If your paths have parted, I can perform the divorce. Cost: {{price}}.',
+                de: 'Du bist mit {{spouse}} verheiratet. Wenn eure Wege sich getrennt haben, kann ich die Scheidung vollziehen. Kosten: {{price}}.',
+                pl: 'Jesteś w związku małżeńskim z {{spouse}}. Jeśli wasze drogi się rozeszły, mogę przeprowadzić rozwód. Koszt: {{price}}.',
+                zh: '你与 {{spouse}} 已结为夫妻。如果你们的道路已分开，我可以为你们办理离婚。费用：{{price}}。',
+            },
+            divorce: {
+                ru: 'Развестись',
+                ua: 'Розлучитися',
+                en: 'Divorce',
+                de: 'Scheiden lassen',
+                pl: 'Rozwód',
+                zh: '离婚',
+            },
+        },
+
+        confirmDivorce: {
+            message: {
+                ru: 'Подумай ещё раз, дитя моё. Развод с {{spouse}} обойдётся в {{price}}. Готов ли ты к этому шагу?',
+                ua: 'Подумай ще раз, дитя моє. Розлучення з {{spouse}} коштуватиме {{price}}. Чи готовий ти до цього кроку?',
+                en: 'Think again, my child. Divorcing {{spouse}} will cost {{price}}. Are you ready to take this step?',
+                de: 'Überlege noch einmal, mein Kind. Die Scheidung von {{spouse}} kostet {{price}}. Bist du zu diesem Schritt bereit?',
+                pl: 'Pomyśl jeszcze raz, moje dziecko. Rozwód z {{spouse}} będzie kosztować {{price}}. Czy jesteś gotów na ten krok?',
+                zh: '再考虑一下，我的孩子。与 {{spouse}} 离婚需花费 {{price}}。你准备好迈出这一步了吗？',
+            },
+            confirm: {
+                ru: 'Да, развестись ({{price}})',
+                ua: 'Так, розлучитися ({{price}})',
+                en: 'Yes, divorce ({{price}})',
+                de: 'Ja, scheiden lassen ({{price}})',
+                pl: 'Tak, rozwód ({{price}})',
+                zh: '是的，离婚 ({{price}})',
+            },
+            cancel: {
+                ru: 'Нет, остаться вместе',
+                ua: 'Ні, залишитися разом',
+                en: 'No, stay together',
+                de: 'Nein, zusammenbleiben',
+                pl: 'Nie, pozostać razem',
+                zh: '不，继续在一起',
+            },
+        },
+
+        priestQuest_intro: {
+            message: {
+                ru: 'Заметно, дитя моё? Тяжко на сердце у старика, и неспроста ты заглянул. Беда у меня. Не такая, с которой к мирянам обращаются, но и Господь, видно, не зря привёл тебя сюда.',
+                ua: 'Помітно, дитя моє? Тяжко на серці у старого, і недарма ти завітав. Біда в мене. Не така, з якою до мирян звертаються, та й Господь, видно, недарма привів тебе сюди.',
+                en: 'Is it that plain to see, my child? A heavy weight lies on this old man\'s heart, and it is no coincidence you have come. I am in trouble. Not the kind one shares with laymen, yet the Lord has brought you here for a reason.',
+                de: 'Sieht man es so deutlich, mein Kind? Ein schweres Gewicht liegt auf dem Herzen dieses alten Mannes, und es ist kein Zufall, dass du gekommen bist. Ich bin in Not. Nicht von der Art, die man mit Laien teilt, doch der Herr hat dich nicht ohne Grund hierher geführt.',
+                pl: 'Aż tak to widać, moje dziecko? Ciężko jest na sercu starego, i nieprzypadkowo zajrzałeś. Mam kłopot. Nie z tych, którymi dzieli się ze świeckimi, lecz Pan, widać, nie bez powodu cię tu przyprowadził.',
+            },
+            ask: {
+                ru: 'Что стряслось, отец?',
+                ua: 'Що сталося, отче?',
+                en: 'What troubles you, father?',
+                de: 'Was bedrückt dich, Vater?',
+                pl: 'Co się stało, ojcze?',
+            },
+            later: {
+                ru: 'В другой раз, отец.',
+                ua: 'Іншим разом, отче.',
+                en: 'Another time, father.',
+                de: 'Ein anderes Mal, Vater.',
+                pl: 'Innym razem, ojcze.',
+            },
+        },
+
+        priestQuest_problem: {
+            message: {
+                ru: 'Была у меня книга. Толстая, в кожаном переплёте, с медной застёжкой. Я записывал в неё то, что прихожане шептали мне в исповедальне. Не для чужих глаз, упаси Бог, для памяти моей одной - чтобы молиться за каждого по имени. Вчера, пока я служил вечерню, кто-то проник в храм и унёс её.',
+                ua: 'Була в мене книга. Товста, у шкіряній оправі, з мідною застібкою. Я записував у неї те, що парафіяни шепотіли мені на сповіді. Не для чужих очей, борони Боже, для пам\'яті моєї однієї - щоб молитися за кожного по імені. Учора, поки я служив вечірню, хтось пробрався до храму і виніс її.',
+                en: 'I had a book. Thick, bound in leather, with a brass clasp. I wrote in it what the parishioners whispered to me at confession. Not for any other eyes, God forbid, only for my own memory - to pray for each soul by name. Yesterday, while I was holding vespers, someone broke into the church and took it.',
+                de: 'Ich hatte ein Buch. Dick, in Leder gebunden, mit einer Messingspange. Ich schrieb darin nieder, was die Gemeindemitglieder mir im Beichtstuhl zuflüsterten. Nicht für fremde Augen, Gott bewahre, allein für mein Gedächtnis - damit ich für jeden bei seinem Namen beten kann. Gestern, während ich die Vesper hielt, brach jemand in die Kirche ein und nahm es mit.',
+                pl: 'Miałem księgę. Grubą, w skórzanej oprawie, z mosiężnym zatrzaskiem. Zapisywałem w niej to, co parafianie szeptali mi przy spowiedzi. Nie dla obcych oczu, broń Boże, jedynie dla mojej pamięci - abym modlił się za każdego po imieniu. Wczoraj, podczas gdy odprawiałem nieszpory, ktoś wtargnął do świątyni i ją zabrał.',
+            },
+            who: {
+                ru: 'Кто мог такое сделать?',
+                ua: 'Хто міг таке зробити?',
+                en: 'Who could have done such a thing?',
+                de: 'Wer könnte so etwas tun?',
+                pl: 'Kto mógł zrobić coś takiego?',
+            },
+            refuse: {
+                ru: 'Я не ввязываюсь в такие дела.',
+                ua: 'Я не лізу в такі справи.',
+                en: 'I do not get involved in such matters.',
+                de: 'Ich mische mich nicht in solche Angelegenheiten ein.',
+                pl: 'Nie wtrącam się w takie sprawy.',
+            },
+        },
+
+        priestQuest_thief: {
+            message: {
+                ru: 'Ни имени, ни лица я не знаю. Знаю одно: если эта книга попадёт в дурные руки - десятки людей лишатся покоя. Семьи разрушатся, дела пойдут под нож, чьи-то могилы выкопают раньше срока. На моей душе будет каждая такая судьба, дитя. Один человек, водитель грузовика из паствы моей, поутру видел чужака с мешком на плече. Тот направлялся на север, в пустыню Гранд-Сенора. Там, у самолётных обломков на шоссе 68, всякое отребье прячет краденое. Книга где-то там, я чую.',
+                ua: 'Ні імені, ні обличчя я не знаю. Знаю одне: якщо ця книга потрапить до лихих рук - десятки людей втратять спокій. Сім\'ї зруйнуються, справи підуть під ніж, чиїсь могили викопають раніше строку. На моїй душі буде кожна така доля, дитя. Один чоловік, водій вантажівки з пастви моєї, зранку бачив чужинця з мішком на плечі. Той прямував на північ, у пустелю Гранд-Сенора. Там, біля уламків літака на шосе 68, всяке покидьки ховають крадене. Книга десь там, я відчуваю.',
+                en: 'Neither name nor face do I know. I know only this: if that book falls into the wrong hands, dozens will lose their peace. Families will be torn apart, businesses cut down, graves dug before their time. Every such fate will weigh on my soul, child. One man, a trucker from my flock, saw a stranger with a sack over his shoulder at dawn. He was heading north, into the Grand Senora Desert. There, by the airplane wrecks along Route 68, all manner of scum hide their loot. The book is there somewhere, I feel it.',
+                de: 'Weder Name noch Gesicht kenne ich. Eines weiß ich nur: Wenn dieses Buch in falsche Hände gerät, verlieren Dutzende Menschen ihren Frieden. Familien zerbrechen, Geschäfte gehen kaputt, manche Gräber werden früher als nötig geschaufelt. Jedes solche Schicksal wird auf meiner Seele lasten, Kind. Ein Mann, ein Lastwagenfahrer aus meiner Gemeinde, sah am Morgen einen Fremden mit einem Sack auf der Schulter. Er ging nach Norden, in die Grand-Senora-Wüste. Dort, bei den Flugzeugwracks an der Route 68, verstecken allerlei Verbrecher ihre Beute. Das Buch ist irgendwo dort, ich fühle es.',
+                pl: 'Ani imienia, ani twarzy nie znam. Wiem jedno: jeśli ta księga trafi w nieodpowiednie ręce - dziesiątki ludzi stracą spokój. Rodziny się rozpadną, interesy pójdą pod nóż, czyjeś groby zostaną wykopane przed czasem. Na mojej duszy będzie każdy taki los, dziecko. Pewien człowiek, kierowca ciężarówki z mojej trzody, widział rano obcego z workiem na ramieniu. Szedł na północ, w pustynię Grand Senora. Tam, przy wrakach samolotów przy szosie 68, wszelaki szumowiny chowają kradzione rzeczy. Księga jest gdzieś tam, czuję to.',
+            },
+            accept: {
+                ru: 'Я найду её, отец.',
+                ua: 'Я знайду її, отче.',
+                en: 'I will find it, father.',
+                de: 'Ich werde es finden, Vater.',
+                pl: 'Znajdę ją, ojcze.',
+            },
+            reward: {
+                ru: 'А что мне за это будет?',
+                ua: 'А що мені за це буде?',
+                en: 'And what is in it for me?',
+                de: 'Und was springt für mich dabei heraus?',
+                pl: 'A co ja z tego będę miał?',
+            },
+            decline: {
+                ru: 'Извини, отец, не моё это.',
+                ua: 'Вибач, отче, не моє це.',
+                en: 'Forgive me, father, this is not my burden.',
+                de: 'Verzeih, Vater, das ist nicht meine Sache.',
+                pl: 'Wybacz, ojcze, to nie moja sprawa.',
+            },
+        },
+
+        priestQuest_reward: {
+            message: {
+                ru: 'Не золото движет тобой, я вижу. И всё же я не приму твой труд даром. В храмовой кассе скоплены скромные пожертвования - все они твои, когда вернёшь книгу. И благословение моё в придачу: оно стоит больше серебра, помяни моё слово.',
+                ua: 'Не золото рухає тобою, я бачу. І все ж я не прийму твою працю задарма. У храмовій касі зібрані скромні пожертви - усі вони твої, коли повернеш книгу. І благословення моє на додачу: воно варте більше срібла, пам\'ятай моє слово.',
+                en: 'It is not gold that drives you, I can see. And yet I will not accept your labor for nothing. In the temple\'s coffers there are humble offerings - all of them are yours when you return the book. And my blessing besides: it is worth more than silver, mark my word.',
+                de: 'Es ist nicht Gold, das dich treibt, das sehe ich. Und doch werde ich deine Mühe nicht umsonst annehmen. In der Kirchenkasse sind bescheidene Spenden gesammelt - sie alle gehören dir, sobald du das Buch zurückbringst. Und mein Segen dazu: er ist mehr wert als Silber, behalte mein Wort.',
+                pl: 'To nie złoto tobą kieruje, widzę. A jednak nie przyjmę twojego trudu za darmo. W skarbcu świątyni zebrane są skromne datki - wszystkie będą twoje, kiedy wrócisz z księgą. I moje błogosławieństwo na dodatek: warte jest więcej niż srebro, zapamiętaj me słowo.',
+            },
+            agree: {
+                ru: 'Хорошо, я согласен.',
+                ua: 'Добре, я згоден.',
+                en: 'Very well, I agree.',
+                de: 'Nun gut, ich bin einverstanden.',
+                pl: 'Dobrze, zgadzam się.',
+            },
+            think: {
+                ru: 'Подумаю.',
+                ua: 'Подумаю.',
+                en: 'I will think on it.',
+                de: 'Ich werde darüber nachdenken.',
+                pl: 'Pomyślę.',
+            },
+        },
+
+        priestQuest_accept: {
+            message: {
+                ru: 'Иди с миром, дитя. И помни: ни единой страницы из той книги не должно увидеть чужое око. Господь укрепит тебя в пути.',
+                ua: 'Іди з миром, дитя. І пам\'ятай: жодної сторінки з тієї книги не повинне побачити чуже око. Господь укріпить тебе в дорозі.',
+                en: 'Go in peace, child. And remember: not a single page of that book must meet another\'s eye. The Lord will strengthen you on the road.',
+                de: 'Geh in Frieden, Kind. Und denke daran: keine einzige Seite dieses Buches darf in fremde Augen fallen. Der Herr wird dich auf dem Weg stärken.',
+                pl: 'Idź w pokoju, dziecko. I pamiętaj: żadna strona tej księgi nie może ujrzeć obcego oka. Pan umocni cię w drodze.',
+            },
+            bless: {
+                ru: 'Благослови, отец.',
+                ua: 'Благослови, отче.',
+                en: 'Bless me, father.',
+                de: 'Segne mich, Vater.',
+                pl: 'Pobłogosław, ojcze.',
+            },
+        },
+    },
+
+    modal: {
+        title: {
+            ru: 'Кому предложить руку и сердце?',
+            ua: 'Кому запропонувати руку та серце?',
+            en: 'Who do you want to propose to?',
+            de: 'Wem möchtest du einen Antrag machen?',
+            pl: 'Komu chcesz się oświadczyć?',
+            zh: '你想向谁求婚？',
+        },
+    },
+
+    offer: {
+        text: {
+            ru: 'Предлагает заключить брак за {{price}}',
+            ua: 'Пропонує укласти шлюб за {{price}}',
+            en: 'Offers to marry for {{price}}',
+            de: 'Bietet eine Heirat für {{price}} an',
+            pl: 'Proponuje zawarcie małżeństwa za {{price}}',
+            zh: '提议以 {{price}} 结婚',
+        },
+    },
+
+    broadcast: {
+        married: {
+            ru: '~p~Любовь и согласие! ~w~{{first}} ~p~и ~w~{{second}} ~p~сегодня заключили брак. Поздравляем молодожёнов!',
+            ua: '~p~Любов і злагода! ~w~{{first}} ~p~та ~w~{{second}} ~p~сьогодні уклали шлюб. Вітаємо молодят!',
+            en: '~p~Love and harmony! ~w~{{first}} ~p~and ~w~{{second}} ~p~have tied the knot today. Congratulations to the newlyweds!',
+            de: '~p~Liebe und Eintracht! ~w~{{first}} ~p~und ~w~{{second}} ~p~haben heute geheiratet. Glückwunsch dem Brautpaar!',
+            pl: '~p~Miłość i zgoda! ~w~{{first}} ~p~i ~w~{{second}} ~p~zawarli dziś związek małżeński. Gratulujemy nowożeńcom!',
+            zh: '~p~爱与和谐！~w~{{first}} ~p~和 ~w~{{second}} ~p~今天结为夫妻。祝贺这对新人！',
+        },
+    },
+
+    notify: {
+        alreadyMarried: {
+            ru: 'Вы уже состоите в браке.',
+            ua: 'Ви вже перебуваєте у шлюбі.',
+            en: 'You are already married.',
+            de: 'Du bist bereits verheiratet.',
+            pl: 'Już jesteś w związku małżeńskim.',
+            zh: '你已经结婚了。',
+        },
+        targetAlreadyMarried: {
+            ru: 'Этот человек уже состоит в браке.',
+            ua: 'Ця особа вже перебуває у шлюбі.',
+            en: 'This person is already married.',
+            de: 'Diese Person ist bereits verheiratet.',
+            pl: 'Ta osoba jest już w związku małżeńskim.',
+            zh: '此人已结婚。',
+        },
+        sameSex: {
+            ru: 'Брак возможен только между мужчиной и женщиной.',
+            ua: 'Шлюб можливий лише між чоловіком і жінкою.',
+            en: 'Marriage is only possible between a man and a woman.',
+            de: 'Eine Ehe ist nur zwischen einem Mann und einer Frau möglich.',
+            pl: 'Małżeństwo jest możliwe tylko między mężczyzną a kobietą.',
+            zh: '婚姻只能在男女之间进行。',
+        },
+        noEligibleNearby: {
+            ru: 'Рядом нет подходящих кандидатов противоположного пола.',
+            ua: 'Поруч немає підходящих кандидатів протилежної статі.',
+            en: 'There are no eligible candidates of the opposite sex nearby.',
+            de: 'In der Nähe gibt es keine geeigneten Kandidaten des anderen Geschlechts.',
+            pl: 'W pobliżu nie ma odpowiednich kandydatów przeciwnej płci.',
+            zh: '附近没有合适的异性候选人。',
+        },
+        notEnoughMoneyPropose: {
+            ru: 'Для проведения церемонии нужно {{price}} наличными.',
+            ua: 'Для проведення церемонії потрібно {{price}} готівкою.',
+            en: 'You need {{price}} in cash to perform the ceremony.',
+            de: 'Für die Zeremonie werden {{price}} in bar benötigt.',
+            pl: 'Do przeprowadzenia ceremonii potrzebujesz {{price}} w gotówce.',
+            zh: '举行婚礼需要 {{price}} 现金。',
+        },
+        notEnoughMoneyDivorce: {
+            ru: 'Для развода нужно {{price}} наличными.',
+            ua: 'Для розлучення потрібно {{price}} готівкою.',
+            en: 'You need {{price}} in cash to divorce.',
+            de: 'Für die Scheidung werden {{price}} in bar benötigt.',
+            pl: 'Do rozwodu potrzebujesz {{price}} w gotówce.',
+            zh: '离婚需要 {{price}} 现金。',
+        },
+        notMarried: {
+            ru: 'Вы не состоите в браке.',
+            ua: 'Ви не перебуваєте у шлюбі.',
+            en: 'You are not married.',
+            de: 'Du bist nicht verheiratet.',
+            pl: 'Nie jesteś w związku małżeńskim.',
+            zh: '你未结婚。',
+        },
+        proposalPending: {
+            ru: 'У вас уже есть отправленное предложение. Дождитесь ответа или истечения срока.',
+            ua: 'У вас вже є надіслана пропозиція. Дочекайтеся відповіді або закінчення терміну.',
+            en: 'You already have a pending proposal. Wait for a reply or for it to expire.',
+            de: 'Du hast bereits einen offenen Antrag. Warte auf eine Antwort oder bis er abläuft.',
+            pl: 'Masz już aktywne oświadczyny. Poczekaj na odpowiedź lub na ich wygaśnięcie.',
+            zh: '你已经发出了求婚邀请。请等待回复或邀请失效。',
+        },
+        targetBusy: {
+            ru: 'Этот человек сейчас рассматривает другое предложение.',
+            ua: 'Ця особа зараз розглядає іншу пропозицію.',
+            en: 'This person is already considering another proposal.',
+            de: 'Diese Person prüft gerade einen anderen Antrag.',
+            pl: 'Ta osoba rozważa już inne oświadczyny.',
+            zh: '此人正在考虑其他求婚邀请。',
+        },
+        proposalSent: {
+            ru: 'Предложение отправлено {{name}}.',
+            ua: 'Пропозицію надіслано {{name}}.',
+            en: 'Proposal sent to {{name}}.',
+            de: 'Antrag an {{name}} gesendet.',
+            pl: 'Oświadczyny wysłane do {{name}}.',
+            zh: '已向 {{name}} 求婚。',
+        },
+        married: {
+            ru: 'Поздравляем! Вы заключили брак с {{name}}.',
+            ua: 'Вітаємо! Ви уклали шлюб з {{name}}.',
+            en: 'Congratulations! You are now married to {{name}}.',
+            de: 'Glückwunsch! Du bist nun mit {{name}} verheiratet.',
+            pl: 'Gratulacje! Jesteś teraz w związku małżeńskim z {{name}}.',
+            zh: '恭喜！你已与 {{name}} 结为夫妻。',
+        },
+        divorced: {
+            ru: 'Вы развелись с {{name}}.',
+            ua: 'Ви розлучилися з {{name}}.',
+            en: 'You have divorced {{name}}.',
+            de: 'Du hast dich von {{name}} scheiden lassen.',
+            pl: 'Rozwiodłeś się z {{name}}.',
+            zh: '你已与 {{name}} 离婚。',
+        },
+        divorcedByPartner: {
+            ru: '{{name}} развёлся с вами.',
+            ua: '{{name}} розлучився з вами.',
+            en: '{{name}} has divorced you.',
+            de: '{{name}} hat sich von dir scheiden lassen.',
+            pl: '{{name}} rozwiódł się z tobą.',
+            zh: '{{name}} 已与你离婚。',
+        },
+    },
+};
