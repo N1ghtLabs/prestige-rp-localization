@@ -1,0 +1,564 @@
+export default {
+    processArrestInstruction: {
+        ru: 'Чтобы оформить арест игрока, вы должны вести его за собой',
+        ua: 'Щоб оформити арешт гравця, ви повинні вести його за собою',
+        en: "To process a player's arrest, you must lead them",
+        de: 'Um die Verhaftung eines Spielers zu bearbeiten, musst du ihn führen',
+        pl: 'Aby dokonać aresztowania gracza, musisz go prowadzić',
+        zh: '为了逮捕，你必须把他带到你身后',
+    },
+    leadPlayerInstruction: {
+        ru: 'Чтобы вести игрока за собой, наденьте на него наручники',
+        ua: 'Щоб вести гравця за собою, надіньте на нього кайданки',
+        en: 'To lead a player, cuff them first',
+        de: 'Um einen Spieler zu führen, lege ihm zuerst Handschellen an',
+        pl: 'Aby prowadzić gracza, najpierw załóż na niego kajdanki',
+        zh: '要领导一名球员，先给他们戴上手铐',
+    },
+    youAreRestrained: {
+        ru: 'Вы не можете этого сделать, пока связаны',
+        ua: "Ви не можете цього зробити, поки зв'язані",
+        en: 'You cannot do this while restrained',
+        de: 'Du kannst das nicht tun, solange du gefesselt bist',
+        pl: 'Nie możesz tego zrobić, gdy jesteś skrępowany',
+    },
+    //
+    useHandCuffs: {
+        ru: '{{firstName}} надел(а) наручники на {{targetName}}',
+        ua: '{{firstName}} надів(ла) кайданки на {{targetName}}',
+        en: '{{firstName}} has cuffed {{targetName}}',
+        de: '{{firstName}} hat {{targetName}} Handschellen angelegt',
+        pl: '{{firstName}} założył(a) kajdanki na {{targetName}}',
+        zh: '｛firstName｝｝已被套上｛｛targetName｝｝',
+    },
+    removeHandCuffs: {
+        ru: '{{firstName}} снял(а) наручники с {{targetName}}',
+        ua: '{{firstName}} зняв(ла) кайданки з {{targetName}}',
+        en: '{{firstName}} removed handcuffs from {{targetName}}',
+        de: '{{firstName}} hat {{targetName}} die Handschellen abgenommen',
+        pl: '{{firstName}} zdjął(a) kajdanki z {{targetName}}',
+        zh: '｛｛firstName｝｝从｛｛targetName｝｝中摘下了手铐',
+    },
+    useCabbleTie: {
+        ru: '{{firstName}} надел(а) стяжки на руки {{targetName}}',
+        ua: '{{firstName}} надів(ла) стяжки на руки {{targetName}}',
+        en: "{{firstName}} put cable ties on {{targetName}}'s hands",
+        de: '{{firstName}} hat {{targetName}} Kabelbinder an den Händen angebracht',
+        pl: '{{firstName}} założył(a) opaski kablowe na ręce {{targetName}}',
+    },
+    removeCabbleTie: {
+        ru: '{{firstName}} снял(а) стяжки с рук {{targetName}}',
+        ua: '{{firstName}} зняв(ла) стяжки з рук {{targetName}}',
+        en: "{{firstName}} removed cable ties from {{targetName}}'s hands",
+        de: '{{firstName}} hat die Kabelbinder von den Händen von {{targetName}} entfernt',
+        pl: '{{firstName}} zdjął(ęła) opaski kablowe z rąk {{targetName}}',
+    },
+    useHeadBag: {
+        ru: '{{firstName}} надел(а) мешок на голову {{targetName}}',
+        ua: '{{firstName}} надів(ла) мішок на голову {{targetName}}',
+        en: "{{firstName}} put a bag over {{targetName}}'s head",
+        de: '{{firstName}} hat {{targetName}} einen Sack über den Kopf gezogen',
+        pl: '{{firstName}} założył(a) worek na głowę {{targetName}}',
+    },
+    removeHeadBag: {
+        ru: '{{firstName}} снял(а) мешок с головы {{targetName}}',
+        ua: '{{firstName}} зняв(ла) мішок з голови {{targetName}}',
+        en: "{{firstName}} removed the bag from {{targetName}}'s head",
+        de: '{{firstName}} hat {{targetName}} den Sack vom Kopf genommen',
+        pl: '{{firstName}} zdjął(ęła) worek z głowy {{targetName}}',
+    },
+    bagPutOnYourHead: {
+        ru: 'На вас надели мешок на голову',
+        ua: 'На вас надягли мішок на голову',
+        en: 'A bag has been put over your head',
+        de: 'Dir wurde ein Sack über den Kopf gezogen',
+        pl: 'Założono ci worek na głowę',
+    },
+    bagRemovedFromYourHead: {
+        ru: 'С вас сняли мешок',
+        ua: 'З вас зняли мішок',
+        en: 'The bag has been removed from your head',
+        de: 'Der Sack wurde dir vom Kopf genommen',
+        pl: 'Zdjęto ci worek z głowy',
+    },
+    //
+    startedLead: {
+        ru: '{{firstName}} начал(а) вести за собой {{targetName}}',
+        ua: '{{firstName}} почав(ла) вести за собою {{targetName}}',
+        en: '{{firstName}} started leading {{targetName}}',
+        de: '{{firstName}} begann, {{targetName}} zu führen',
+        pl: '{{firstName}} zaczął(a) prowadzić {{targetName}}',
+        zh: '｛firstName｝｝开始跟随｛｛targetName｝',
+    },
+    stoppedLead: {
+        ru: '{{firstName}} прекратил(а) вести за собой {{targetName}}',
+        ua: '{{firstName}} припинив(ла) вести за собою {{targetName}}',
+        en: '{{firstName}} stopped leading {{targetName}}',
+        de: '{{firstName}} hörte auf, {{targetName}} zu führen',
+        pl: '{{firstName}} przestał(a) prowadzić {{targetName}}',
+        zh: '｛｛firstName｝｝已停止跟踪｛｛targetName｝',
+    },
+    putToVehicle: {
+        ru: '{{firstName}} завалил(а) {{targetName}} и затащил в машину',
+        ua: '{{firstName}} завалив(ла) {{targetName}} і затягнув в машину',
+        en: '{{firstName}} overpowered {{targetName}} and put them in the vehicle',
+        de: '{{firstName}} hat {{targetName}} überwältigt und ins Fahrzeug gezogen',
+        pl: '{{firstName}} obezwładnił(a) {{targetName}} i włożył do samochodu',
+        zh: '｛｛firstName｝｝制服了｛｛targetName｝｝并将其放入车内',
+    },
+    removedFromVehicle: {
+        ru: '{{firstName}} вытащил(а) {{targetName}} с машины',
+        ua: '{{firstName}} витягнув(ла) {{targetName}} з машини',
+        en: '{{firstName}} removed {{targetName}} from the vehicle',
+        de: '{{firstName}} hat {{targetName}} aus dem Fahrzeug genommen',
+        pl: '{{firstName}} wyciągnął(a) {{targetName}} z samochodu',
+        zh: '“{{firstName}}将{{targetName}}拉出汽车”，',
+    },
+    noOccupants: {
+        ru: 'В машине нет пассажиров',
+        ua: 'У машині немає пасажирів',
+        en: 'There are no occupants in the vehicle',
+        de: 'Im Fahrzeug sind keine Insassen',
+        pl: 'W samochodzie nie ma pasażerów',
+        zh: '车里没有乘客',
+    },
+    checkVehicleModal: {
+        title: {
+            ru: 'Проверка автомобиля',
+            ua: 'Перевірка автомобіля',
+            en: 'Car check',
+            de: 'Autoüberprüfung',
+            pl: 'Sprawdzenie samochodu',
+            zh: '“汽车检查',
+        },
+        message: {
+            ru: 'Модель: {{model}} <br /> Номер: {{plate}} <br /> Владелец: {{owner}} <br /> Статус: {{status}}',
+            ua: 'Модель: {{model}} <br /> Номер: {{plate}} <br /> Власник: {{owner}} <br /> Статус: {{status}}',
+            en: 'Model: {{model}} <br /> Number: {{plate}} <br /> Owner: {{owner}} <br /> Status: {{status}}',
+            de: 'Modell: {{model}} <br /> Nummer: {{plate}} <br /> Besitzer: {{owner}} <br /> Status: {{status}}',
+            pl: 'Model: {{model}} <br /> Numer: {{plate}} <br /> Właściciel: {{owner}} <br /> Status: {{status}}',
+            zh: '型号：｛｛Model｝｝<br/>编号：｛｛plate｝<br/＞所有者：｛｛Owner｝＜br/＞状态：｛｛Status｝｝',
+        },
+        cancelButton: {
+            ru: 'Закрыть',
+            ua: 'Закрити',
+            en: 'Close',
+            de: 'Schließen',
+            pl: 'Zamknij',
+            zh: '关闭',
+        },
+        stolen: {
+            ru: 'Угнаный',
+            ua: 'Викрадений',
+            en: 'Stolen',
+            de: 'Gestohlen',
+            pl: 'Skradziony',
+            zh: '被盗',
+        },
+        ok: {
+            ru: 'Ок',
+            ua: 'Ок',
+            en: 'Ok',
+            de: 'Ok',
+            pl: 'Ok',
+            zh: '好的',
+        },
+    },
+
+    //
+    takedBlood: {
+        ru: '{{firstName}} взял(а) кровь на анализ от {{targetName}}',
+        ua: '{{firstName}} взяв(ла) кров на аналіз від {{targetName}}',
+        en: '{{firstName}} took a blood test from {{targetName}}',
+        de: '{{firstName}} hat {{targetName}} Blut für eine Analyse abgenommen',
+        pl: '{{firstName}} pobrał(a) krew do analizy od {{targetName}}',
+        zh: '{firstName}}从{targetName}分析中采集了血液，',
+    },
+
+    playerHasCooldown: {
+        ru: 'Этот человек уже недавно сдавал кровь',
+        ua: 'Ця людина вже нещодавно здавала кров',
+        en: 'This person has already recently donated blood',
+        de: 'Diese Person hat kürzlich bereits Blut gespendet',
+        pl: 'Ta osoba niedawno oddała krew',
+        zh: '这个人最近献血了',
+    },
+
+    //
+    robMoney: {
+        ru: 'Ограбить',
+        ua: 'Ограбувати',
+        en: 'Rob',
+        de: 'Rauben',
+        pl: 'Ograbić',
+        zh: '抓',
+    },
+
+    targetHasNoMoney: {
+        ru: 'У гражданина нет столько денег',
+        ua: 'У громадянина немає стільки грошей',
+        en: 'The target has no money',
+        de: 'Das Ziel hat kein Geld',
+        pl: 'Ofiara nie ma pieniędzy',
+        zh: '这个公民没有那么多钱',
+    },
+
+    youWasRobbed: {
+        ru: 'Вас ограбили на ${{value}}',
+        ua: 'Вас пограбували на ${{value}}',
+        en: 'You were robbed for ${{value}}',
+        de: 'Du wurdest um ${{value}} ausgeraubt',
+        pl: 'Zostałeś okradziony o ${{value}}',
+        zh: '你被抢劫了${value}}”',
+    },
+
+    youRobbedTarget: {
+        ru: 'Вы ограбили {{name}} на сумму ${{value}}',
+        ua: 'Ви пограбували {{name}} на суму ${{value}}',
+        en: 'You robbed {{name}} for ${{value}}',
+        de: 'Du hast {{name}} um ${{value}} ausgeraubt',
+        pl: 'Okradłeś {{name}} o kwotę ${{value}}',
+        zh: ',你抢走了{{name}}的金额{{value}}”',
+    },
+
+    targetWasRobbed: {
+        ru: '{{firstName}} ограбил(а) {{targetName}}',
+        ua: '{{firstName}} пограбував(ла) {{targetName}}',
+        en: '{{firstName}} robbed {{targetName}}',
+        de: '{{firstName}} hat {{targetName}} ausgeraubt',
+        pl: '{{firstName}} okradł(a) {{targetName}}',
+        zh: '{firstName}}被抢劫了{{targetName}}”',
+    },
+
+    youHaveRobCooldown: {
+        ru: 'Вы сможете ограбить этого гражданина через {{time}}',
+        ua: 'Ви зможете пограбувати цього громадянина через {{time}}',
+        en: 'You will be able to rob this citizen again in {{time}}',
+        de: 'Du kannst diesen Bürger in {{time}} erneut ausrauben',
+        pl: 'Będziesz mógł ponownie okraść tego obywatela za {{time}}',
+        zh: '你可以通过时间抢劫这个公民',
+    },
+
+    targetNeedToBeRestrainedOrRaiseHand: {
+        ru: 'Гражданин должен быть связан или поднять руки вверх',
+        ua: "Громадянин повинен бути зв'язаний або підняти руки вгору",
+        en: 'The citizen must be restrained or raise their hands up',
+        de: 'Der Bürger muss gefesselt sein oder die Hände heben',
+        pl: 'Obywatel musi być związany lub podnieść ręce do góry',
+    },
+    cantRobTeam: {
+        ru: 'Бей своих чтобы чужие боялись да? С ограблениями так не выйдет бро',
+        ua: "Б'єш своїх, щоб чужі боялися, так? З пограбуваннями так не вийде, бро",
+        en: "Do you hit your own so that others will be afraid? Well, that won't work with robberies, bro",
+        de: 'Schlägst du deine eigenen, damit die anderen Angst haben? So funktioniert das nicht mit Raubüberfällen, Kumpel',
+        pl: 'Bijesz swoich, żeby obcy się bali, tak? Z rabunkami tak nie wyjdzie, ziomek',
+        zh: '“你为了害怕陌生人而和自己打架，是吗？抢劫不是这样的，兄弟？”',
+    },
+    youHaveNoPillsToSell: {
+        ru: 'У вас недостаточно таблеток для продажи',
+        ua: 'У вас недостатньо таблеток для продажу',
+        en: 'You do not have enough pills to sell',
+        de: 'Du hast nicht genug Pillen zum Verkauf',
+        pl: 'Nie masz wystarczającej ilości tabletek do sprzedaży',
+        zh: '你没有足够的药丸可以卖',
+    },
+
+    acceptOfferSellPills: {
+        ru: 'Вы успешно продали таблетки',
+        ua: 'Ти успішно продав таблетки',
+        en: 'You successfully sold the pills',
+        de: 'Du hast die Tabletten erfolgreich verkauft',
+        pl: 'Udało ci się sprzedać tabletki',
+    },
+
+    targetHasNoMoneyToBuyPills: {
+        ru: 'У гражданина недостаточно денег для покупки таблеток',
+        ua: 'У громадянина недостатньо грошей для купівлі таблеток',
+        en: 'The citizen does not have enough money to buy pills',
+        de: 'Der Bürger hat nicht genug Geld, um Pillen zu kaufen',
+        pl: 'Obywatel nie ma wystarczająco dużo pieniędzy na zakup tabletek',
+        zh: '公民没有足够的钱买药',
+    },
+
+    youDontHaveHandCuffs: {
+        ru: 'У вас нет наручников',
+        ua: 'У вас немає наручників',
+        en: "You don't have handcuffs",
+        de: 'Du hast keine Handschellen',
+        pl: 'Nie masz kajdanek',
+        zh: ',“你没有手铐',
+    },
+
+    // Licenses take
+    licenseModalTitle: {
+        ru: 'Отобрать лицензии у {{name}}',
+        ua: 'Відібрати ліцензії у {{name}}',
+        en: 'Revoke Licenses from {{name}}',
+        de: 'Lizenzen von {{name}} entziehen',
+        pl: 'Odbierz licencje od {{name}}',
+        zh: '删除｛｛name｝｝中的许可证',
+    },
+
+    playerHasNoLicenses: {
+        ru: 'У гражданина нет лицензий',
+        ua: 'У гравця немає ліцензій',
+        en: 'The player has no licenses',
+        de: 'Der Spieler hat keine Lizenzen',
+        pl: 'Gracz nie ma licencji',
+        zh: '玩家没有许可证',
+    },
+    youTakedLicenses: {
+        ru: 'Вы отобрали лицензию {{value}} у {{name}}',
+        ua: 'Ви відібрали ліцензію {{value}} у {{name}}',
+        en: 'You revoked the {{value}} license from {{name}}',
+        de: 'Du hast die {{value}}-Lizenz von {{name}} entzogen',
+        pl: 'Odebrałeś licencję {{value}} od {{name}}',
+        zh: '您已经向{{name}}授予了许可证{{value}}”',
+    },
+    yourLicensesTaken: {
+        ru: '{{name}} отобрал у вас лицензию {{value}}',
+        ua: '{{name}} відібрав у вас ліцензію {{value}}',
+        en: '{{name}} revoked your {{value}} license',
+        de: '{{name}} hat Ihnen die {{value}}-Lizenz entzogen',
+        pl: '{{name}} odebrał Ci licencję {{value}}',
+        zh: '｛｛name｝｝已授予您许可证｛｛value｝',
+    },
+
+    //
+    playerHasNoDiseases: {
+        ru: 'Гражданин ничем не болен',
+        ua: 'Громадянин нічим не хворіє',
+        en: 'The citizen has no illnesses',
+        de: 'Der Bürger ist nicht krank',
+        pl: 'Obywatel nie jest chory',
+    },
+
+    playerHasDiseases: {
+        ru: 'Гражданин болен: {{values}}',
+        ua: 'Громадянин хворий: {{values}}',
+        en: 'The citizen is sick: {{values}}',
+        de: 'Der Bürger ist krank: {{values}}',
+        pl: 'Obywatel jest chory: {{values}}',
+    },
+
+    medicalCheckupPassed: {
+        ru: 'Медосмотр пройден, вы полностью здоровы!',
+        ua: 'Медогляд пройдено, ви повністю здорові!',
+        en: 'Medical examination passed, you are completely healthy!',
+        de: 'Gesundheitsuntersuchung bestanden, Sie sind völlig gesund!',
+        pl: 'Badanie lekarskie zaliczone, jesteś całkowicie zdrowy!',
+    },
+
+    youHealedPlayerDiseases: {
+        ru: 'Вы излечили все болезни у {{name}}',
+        ua: 'Ви вилікували всі хвороби у {{name}}',
+        en: 'You cured all diseases of {{name}}',
+        de: 'Du hast alle Krankheiten von {{name}} geheilt',
+        pl: 'Wyleczyłeś wszystkie choroby u {{name}}',
+    },
+
+    youHealedDiseases: {
+        ru: 'Вам излечили все болезни',
+        ua: 'Вам вилікували всі хвороби',
+        en: 'All your diseases have been cured',
+        de: 'Alle deine Krankheiten wurden geheilt',
+        pl: 'Wszystkie twoje choroby zostały wyleczone',
+    },
+    playerAddictionLevel: {
+        ru: 'Наркотическая зависимость гражданина: {{value}}/100',
+        ua: 'Наркотична залежність громадянина: {{value}}/100',
+        en: "Citizen's drug addiction: {{value}}/100",
+        de: 'Drogensucht des Bürgers: {{value}}/100',
+        pl: 'Uzależnienie obywatela od narkotyków: {{value}}/100',
+    },
+
+    playerHasNoAddiction: {
+        ru: 'У гражданина нет наркотической зависимости',
+        ua: 'У громадянина немає наркотичної залежності',
+        en: 'The citizen has no drug addiction',
+        de: 'Der Bürger hat keine Drogensucht',
+        pl: 'Obywatel nie jest uzależniony od narkotyków',
+    },
+
+    youDetoxedPlayer: {
+        ru: 'Вы сняли наркотическую зависимость у {{name}}',
+        ua: 'Ви зняли наркотичну залежність у {{name}}',
+        en: 'You treated the drug addiction of {{name}}',
+        de: 'Du hast die Drogensucht von {{name}} behandelt',
+        pl: 'Wyleczyłeś uzależnienie od narkotyków u {{name}}',
+    },
+
+    youWereDetoxed: {
+        ru: 'Вам сняли наркотическую зависимость',
+        ua: 'Вам зняли наркотичну залежність',
+        en: 'Your drug addiction has been treated',
+        de: 'Deine Drogensucht wurde behandelt',
+        pl: 'Twoje uzależnienie od narkotyków zostało wyleczone',
+    },
+
+    youHealedPlayer: {
+        ru: 'Вы оказали медицинскую помощь {{name}}, пациент в порядке',
+        ua: 'Ви надали медичну допомогу {{name}}, пацієнт у порядку',
+        en: 'You provided medical assistance to {{name}}, the patient is stable',
+        de: 'Du hast {{name}} medizinisch versorgt, der Patient ist stabil',
+        pl: 'Udzieliłeś pomocy medycznej {{name}}, pacjent jest stabilny',
+    },
+    youWereHealed: {
+        ru: 'Доктор оказал вам медицинскую помощь, вы снова в строю',
+        ua: 'Лікар надав вам медичну допомогу, ви знову в строю',
+        en: 'The doctor patched you up - you’re back on your feet',
+        de: 'Der Arzt hat dich versorgt - du bist wieder auf den Beinen',
+        pl: 'Lekarz cię opatrzył - znów stoisz na nogach',
+    },
+    checkPlayerForDiseasesAction: {
+        ru: 'Осматривает {{name}} на наличие болезней',
+        ua: 'Оглядає {{name}} на наявність хвороб',
+        en: 'Examines {{name}} for diseases',
+        de: 'Untersucht {{name}} auf Krankheiten',
+        pl: 'Bada {{name}} pod kątem chorób',
+    },
+
+    //
+    alreadyHasMiltaryTicket: {
+        ru: 'У гражданина уже есть военный билет',
+        ua: 'У громадянина вже є військовий квиток',
+        en: 'The citizen already has a military ID',
+        de: 'Der Bürger hat bereits einen Militärausweis',
+        pl: 'Obywatel posiada już książeczkę wojskową',
+    },
+    youGivedMiltaryTicket: {
+        ru: 'Вы выдали военный билет {{name}}',
+        ua: 'Ви видали військовий квиток {{name}}',
+        en: 'You issued a military ID to {{name}}',
+        de: 'Du hast {{name}} einen Militärausweis ausgestellt',
+        pl: 'Wydałeś książeczkę wojskową {{name}}',
+    },
+    youReceiveMiltaryTicket: {
+        ru: 'Вы получили военный билет от {{name}}',
+        ua: 'Ви отримали військовий квиток від {{name}}',
+        en: 'You received a military ID from {{name}}',
+        de: 'Du hast einen Militärausweis von {{name}} erhalten',
+        pl: 'Otrzymałeś książeczkę wojskową od {{name}}',
+    },
+
+    youDontHave: {
+        handcuffs: {
+            ru: 'У вас нет наручников',
+            ua: 'У вас немає наручників',
+            en: "You don't have handcuffs",
+            de: 'Du hast keine Handschellen',
+            pl: 'Nie masz kajdanek',
+        },
+        cabbleTie: {
+            ru: 'У вас нет стяжек',
+            ua: 'У вас немає стяжок',
+            en: "You don't have cable ties",
+            de: 'Du hast keine Kabelbinder',
+            pl: 'Nie masz opasek kablowych',
+        },
+        headBag: {
+            ru: 'У вас нет мешка',
+            ua: 'У вас немає мішка',
+            en: "You don't have a bag",
+            de: 'Du hast keinen Sack',
+            pl: 'Nie masz worka',
+        },
+    },
+
+    //
+    takeMask: {
+        ru: '{{firstName}} сорвал маску с {{targetName}}',
+        ua: '{{firstName}} зірвав маску з {{targetName}}',
+        en: '{{firstName}} ripped the mask off {{targetName}}',
+        de: '{{firstName}} hat {{targetName}} die Maske vom Gesicht gerissen',
+        pl: '{{firstName}} zerwał maskę z {{targetName}}',
+    },
+
+    //
+    noReanimateId: {
+        ru: 'У вас нет реанимационного комплекта',
+        ua: 'У вас немає реанімаційного комплекту',
+        en: "You don't have a resuscitation kit",
+        de: 'Du hast keinen Reanimationskoffer',
+        pl: 'Nie masz zestawu reanimacyjnego',
+    },
+
+    noFreeSeats: {
+        ru: 'В машине нет свободных мест',
+        ua: 'У машині немає вільних місць',
+        en: 'There are no free seats in the vehicle',
+        de: 'Im Fahrzeug sind keine freien Plätze',
+        pl: 'W pojeździe nie ma wolnych miejsc',
+    },
+
+    noFollowedTarget: {
+        ru: 'Ты никого не ведёшь, чтобы посадить в машину',
+        ua: 'Ти нікого не ведеш, щоб посадити в машину',
+        en: 'You’re not escorting anyone to put in the vehicle',
+        de: 'Du bringst niemanden zum Fahrzeug, den du hineinsetzen könntest',
+        pl: 'Nikogo nie prowadzisz, żeby wsadzić do pojazdu',
+    },
+
+    //
+    notUnderwearToCheckDiseases: {
+        ru: 'Чтобы проверить здоровье человека он должен снять всю верхнюю одежду',
+        ua: "Щоб перевірити здоров'я людини, вона повинна зняти весь верхній одяг",
+        en: "To check a person's health, they need to take off all outer clothing",
+        de: 'Um die Gesundheit einer Person zu überprüfen, muss sie ihre gesamte Oberbekleidung ausziehen',
+        pl: 'Aby sprawdzić zdrowie osoby, musi ona zdjąć całą odzież wierzchnią',
+    },
+    notUnderwearToHealDiseases: {
+        ru: 'Чтобы вылечить человека, он должен снять всю верхнюю одежду',
+        ua: 'Щоб вилікувати людину, вона повинна зняти весь верхній одяг',
+        en: 'To heal a person, they need to take off all outer clothing',
+        de: 'Um eine Person zu heilen, muss sie ihre gesamte Oberbekleidung ausziehen',
+        pl: 'Aby wyleczyć osobę, musi ona zdjąć całą odzież wierzchnią',
+    },
+
+    //
+    releaseReasonInvalid: {
+        ru: 'Укажите причину освобождения (от 3 до 200 символов)',
+        ua: 'Вкажіть причину звільнення (від 3 до 200 символів)',
+        en: 'Specify a release reason (between 3 and 200 characters)',
+        de: 'Gib einen Entlassungsgrund an (zwischen 3 und 200 Zeichen)',
+        pl: 'Podaj powód zwolnienia (od 3 do 200 znaków)',
+    },
+    releaseTooFarFromMarker: {
+        ru: 'Вы должны находиться у маркера ареста, чтобы освободить заключенного',
+        ua: "Ви повинні знаходитися біля маркера арешту, щоб звільнити в'язня",
+        en: 'You must be at the arrest marker to release a prisoner',
+        de: 'Du musst dich am Verhaftungsmarker befinden, um einen Häftling zu entlassen',
+        pl: 'Musisz znajdować się przy znaczniku aresztowania, aby zwolnić więźnia',
+    },
+    releasePrisonerNotFound: {
+        ru: 'Заключенный не найден или уже освобожден',
+        ua: "В'язня не знайдено або вже звільнено",
+        en: 'Prisoner not found or already released',
+        de: 'Häftling nicht gefunden oder bereits entlassen',
+        pl: 'Więzień nie został znaleziony lub został już zwolniony',
+    },
+    releaseSuccess: {
+        ru: 'Вы освободили {{name}}',
+        ua: 'Ви звільнили {{name}}',
+        en: 'You released {{name}}',
+        de: 'Du hast {{name}} entlassen',
+        pl: 'Zwolniłeś {{name}}',
+    },
+
+    checkedOwnBadge: {
+        ru: '{{firstName}} достал(а) своё удостоверение и осмотрел(а) его',
+        ua: '{{firstName}} дістав(ла) своє посвідчення і оглянув(ла) його',
+        en: '{{firstName}} took out their ID and looked it over',
+        de: '{{firstName}} holte den eigenen Ausweis hervor und sah ihn sich an',
+        pl: '{{firstName}} wyjął(ęła) swój identyfikator i przyjrzał(a) mu się',
+        zh: '{{firstName}}拿出自己的证件查看了一下',
+    },
+    showedBadge: {
+        ru: '{{firstName}} показал(а) своё удостоверение {{targetName}}',
+        ua: '{{firstName}} показав(ла) своє посвідчення {{targetName}}',
+        en: '{{firstName}} showed their ID to {{targetName}}',
+        de: '{{firstName}} zeigte {{targetName}} den eigenen Ausweis',
+        pl: '{{firstName}} pokazał(a) swój identyfikator {{targetName}}',
+        zh: '{{firstName}}向{{targetName}}出示了自己的证件',
+    },
+};
